@@ -1,0 +1,1138 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Górny Śląsk – Silesia Incognita 2026</title>
+<style>
+:root{--gold:#b8860b;--dark:#1a1a2e;--mid:#16213e;--light:#f5f0e8;--text:#2c2c2c;--muted:#666;}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Georgia,serif;background:var(--light);color:var(--text);line-height:1.7;font-size:15px;}
+header{background:var(--dark);color:#fff;text-align:center;padding:1.5rem 1rem;border-bottom:4px solid var(--gold);}
+header h1{font-size:1.6rem;letter-spacing:1px;margin-bottom:.3rem;}
+header p{color:#aaa;font-size:.85rem;}
+nav{background:var(--mid);position:sticky;top:0;z-index:100;display:flex;flex-wrap:wrap;gap:3px;padding:6px 10px;border-bottom:2px solid var(--gold);}
+nav a{color:#ccc;text-decoration:none;font-family:Arial,sans-serif;font-size:12px;padding:5px 10px;border-radius:4px;white-space:nowrap;}
+nav a:hover,nav a.on{background:var(--gold);color:#000;}
+main{max-width:1100px;margin:0 auto;padding:1.5rem;}
+section{display:none;}
+section.on{display:block;}
+.sec-title{font-size:1.4rem;font-weight:bold;color:var(--dark);border-bottom:3px solid var(--gold);padding-bottom:.4rem;margin-bottom:1.2rem;}
+h3{font-size:1rem;color:var(--dark);margin:1.4rem 0 .6rem;border-left:4px solid var(--gold);padding-left:9px;}
+table{width:100%;border-collapse:collapse;margin-bottom:1.2rem;font-family:Arial,sans-serif;font-size:13px;}
+th{background:var(--dark);color:#fff;padding:8px 11px;text-align:left;}
+td{padding:7px 11px;border-bottom:1px solid #ddd;vertical-align:top;line-height:1.5;}
+tr:nth-child(even) td{background:#f9f5ec;}
+tr:hover td{background:#fff3cd;}
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:12px;margin-bottom:1.2rem;}
+.card{background:#fff;border:1px solid #ddd;border-radius:8px;padding:13px;border-top:4px solid var(--gold);}
+.card h4{font-size:14px;margin-bottom:3px;color:var(--dark);}
+.card .dt{font-size:11px;color:var(--muted);margin-bottom:5px;font-family:Arial,sans-serif;}
+.card p{font-size:13px;line-height:1.6;font-family:Arial,sans-serif;}
+.badge{display:inline-block;font-size:10px;padding:2px 7px;border-radius:10px;margin-bottom:5px;font-family:Arial,sans-serif;font-weight:600;}
+.bp{background:#d4edda;color:#155724;}.bs{background:#cce5ff;color:#004085;}
+.bk{background:#e2d9f3;color:#4a235a;}.bn{background:#fff3cd;color:#856404;}
+.bh{background:#f8d7da;color:#721c24;}.br{background:#fde8d8;color:#7c3200;}
+.alert{padding:11px 15px;border-radius:6px;margin-bottom:1rem;font-family:Arial,sans-serif;font-size:13px;line-height:1.6;}
+.aw{background:#fff3cd;border-left:4px solid #ffc107;color:#856404;}
+.ai{background:#d1ecf1;border-left:4px solid #17a2b8;color:#0c5460;}
+.ad{background:#f8d7da;border-left:4px solid #dc3545;color:#721c24;}
+.ag{background:#d4edda;border-left:4px solid #28a745;color:#155724;}
+.ev{background:#fff;border:1px solid #ddd;border-radius:8px;padding:13px 15px;margin-bottom:10px;}
+.ev.pow{border-left:5px solid #dc3545;}.ev.ple{border-left:5px solid #007bff;}
+.ev.ind{border-left:5px solid #28a745;}.ev.aut{border-left:5px solid #6f42c1;}
+.ev.tra{border-left:5px solid #fd7e14;}.ev.woj{border-left:5px solid #888;}
+.ev .yr{font-size:12px;color:var(--muted);font-family:Arial,sans-serif;font-weight:bold;margin-bottom:3px;}
+.ev h4{font-size:14px;color:var(--dark);margin-bottom:6px;}
+.ev p{font-size:13px;font-family:Arial,sans-serif;line-height:1.6;}
+.tl{border-left:3px solid var(--gold);margin-left:10px;padding-left:20px;margin-bottom:1.2rem;}
+.tli{margin-bottom:1rem;position:relative;}
+.tli::before{content:'';position:absolute;left:-27px;top:5px;width:11px;height:11px;border-radius:50%;background:var(--gold);border:2px solid var(--dark);}
+.tli .yr{font-size:12px;font-weight:bold;color:var(--gold);font-family:Arial,sans-serif;}
+.tli .ti{font-size:14px;font-weight:bold;color:var(--dark);margin:2px 0;}
+.tli .td{font-size:13px;color:var(--muted);font-family:Arial,sans-serif;line-height:1.5;}
+.pc{background:#fff;border:1px solid #ddd;border-radius:8px;padding:13px;margin-bottom:10px;display:flex;gap:12px;}
+.pc .ic{font-size:1.8rem;flex-shrink:0;}
+.pc h4{font-size:14px;font-weight:bold;color:var(--dark);margin-bottom:3px;}
+.pc .mt{font-size:11px;color:var(--muted);font-family:Arial,sans-serif;margin-bottom:4px;}
+.pc p{font-size:13px;font-family:Arial,sans-serif;line-height:1.5;}
+.mn{background:var(--dark);color:#fff;border-radius:8px;padding:13px 17px;margin:1rem 0;font-family:Arial,sans-serif;}
+.mn .lb{font-size:10px;color:var(--gold);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px;}
+.mn .tx{font-size:14px;line-height:1.6;}
+.mn em{color:#ffd700;font-style:normal;font-weight:bold;}
+footer{text-align:center;padding:2rem;color:var(--muted);font-size:12px;font-family:Arial,sans-serif;border-top:1px solid #ddd;margin-top:2rem;}
+</style>
+</head>
+<body>
+<header>
+  <h1>GÓRNY ŚLĄSK XIX–XX WIEK</h1>
+  <p>Materiały na konkurs Silesia Incognita 2026 &nbsp;|&nbsp; Finał: 16 maja 2026, Tychy</p>
+</header>
+<nav>
+  <a href="#" onclick="show('s1')" class="on">Postaci (spis)</a>
+  <a href="#" onclick="show('s2')">Inne osoby</a>
+  <a href="#" onclick="show('s3')">Historia XIX w.</a>
+  <a href="#" onclick="show('s4')">Powstania i plebiscyt</a>
+  <a href="#" onclick="show('s5')">II WŚ i PRL</a>
+  <a href="#" onclick="show('s6')">Miejsca</a>
+  <a href="#" onclick="show('s7')">Architektura</a>
+  <a href="#" onclick="show('s8')">Kultura i nauka</a>
+  <a href="#" onclick="show('s9')">Sport</a>
+  <a href="#" onclick="show('s10')">Mity</a>
+  <a href="#" onclick="show('s11')">Język śląski</a>
+  <a href="#" onclick="show('s12')">Geografia</a>
+  <a href="#" onclick="show('s13')">Przynależność wiekowa</a>
+  <a href="#" onclick="show('s14')">Społeczeństwo</a>
+  <a href="#" onclick="show('s15')">Autonomia</a>
+  <a href="#" onclick="show('s16')">Herb i flaga</a>
+  <a href="#" onclick="show('s17')">Europosłowie</a>
+  <a href="#" onclick="show('s18')">Tradycje</a>
+</nav>
+<main>
+
+<!-- S1 POSTACI SPIS -->
+<section id="s1" class="on">
+<h2 class="sec-title">Postaci z oficjalnego spisu – te osoby najczęściej pojawiają się w konkursie!</h2>
+<div class="alert aw">Naucz się każdej z tych 16 osób – powtarzały się w poprzednich edycjach konkursu.</div>
+<div class="cards">
+
+<div class="card"><span class="badge bs">piłka nożna</span><h4>Gerard Cieślik</h4><div class="dt">1927–2013 | Chorzów</div>
+<p>Najlepszy śląski piłkarz lat 50. Przez całą karierę grał tylko w Ruchu Chorzów – nie chciał odejść do innego klubu, nawet gdy go do tego zmuszano. Wiele razy był królem strzelców. Kapitan reprezentacji Polski.</p></div>
+
+<div class="card"><span class="badge bh">arystokracja</span><h4>Księżna Daisy</h4><div class="dt">1873–1943 | Pszczyna</div>
+<p>Brytyjka Mary Theresa Olivia Cornwallis-West, żona księcia von Pless. Mieszkała w zamku w Pszczynie. Znana z urody i pomocy biednym – założyła szpital. Pisała dzienniki. Cesarz Niemiec Wilhelm II bywał u niej w gościach.</p></div>
+
+<div class="card"><span class="badge bh">przemysł</span><h4>Karol Godula</h4><div class="dt">1781–1848</div>
+<p>Zwany „Królem cynku" – zdobył ogromny majątek na wydobyciu rudy cynku. Syn zwykłego górnika, zaczął od zera. Adoptował Joannę Gryzik i zapisał jej całą fortunę. Sam żył bardzo skromnie mimo ogromnego bogactwa.</p></div>
+
+<div class="card"><span class="badge bp">Kościół / działacz</span><h4>Ksiądz Jan Kapica</h4><div class="dt">1866–1930 | Tychy</div>
+<p>Proboszcz w Tychach. Walczył o prawa Polaków pod rządami pruskimi. Pisał po polsku, zakładał polskie organizacje katolickie. Pomagał w akcji plebiscytowej – namawiał do głosowania za Polską.</p></div>
+
+<div class="card"><span class="badge bp">polityk</span><h4>Wojciech Korfanty</h4><div class="dt">1873–1939 | Siemianowice Śl.</div>
+<p>Najważniejszy śląski polityk w historii. Jako pierwszy Polak z terenów pruskich wszedł do niemieckiego parlamentu (1903). Kierował akcją plebiscytową i III powstaniem śląskim (1921). Walczył i z Niemcami, i z polską sanacją. Więziony, prześladowany. Zmarł 1939 – prawdopodobnie otruty.</p></div>
+
+<div class="card"><span class="badge bk">reżyser / senator</span><h4>Kazimierz Kutz</h4><div class="dt">1929–2018 | Katowice</div>
+<p>Reżyser filmowy i senator RP. Nakręcił trzy wielkie filmy o Śląsku: <em>Sól ziemi czarnej</em> (1969), <em>Perła w koronie</em> (1971), <em>Paciorki jednego różańca</em> (1979). Przez całe życie walczył o śląską tożsamość i godność.</p></div>
+
+<div class="card"><span class="badge bk">artysta / radiowiec</span><h4>Stanisław Ligoń</h4><div class="dt">1879–1954</div>
+<p>Malarz, pisarz i gwiazda radia. Używał pseudonimu „Karlik z Kocyndra" (kocynder = żartowniś). Prowadził audycje radiowe w gwarze śląskiej w Polskim Radio Katowice. Popularyzował śląską kulturę i humor.</p></div>
+
+<div class="card"><span class="badge bk">pisarz / nauczyciel</span><h4>Józef Lompa</h4><div class="dt">1797–1863</div>
+<p>Nauczyciel i pisarz. Jeden z pierwszych, którzy pisali po polsku na Śląsku w XIX wieku – w czasach, gdy Prusacy narzucali język niemiecki. Zbierał śląskie legendy i podania. Tworzył polskie podręczniki dla śląskich dzieci.</p></div>
+
+<div class="card"><span class="badge bh">arystokracja</span><h4>Joanna von Schaffgotsch-Gryzik</h4><div class="dt">1842–1910</div>
+<p>Adoptowana córka Karola Goduli. Odziedziczyła jedną z największych fortun na Śląsku. Po ślubie z hrabią Schaffgotschem stała się bardzo wpływową osobą. Pomagała biednym, budowała kościoły i szkoły.</p></div>
+
+<div class="card"><span class="badge br">patronka Śląska</span><h4>Jadwiga Śląska</h4><div class="dt">ok. 1174–1243</div>
+<p>Księżna śląska, żona Henryka Brodatego. Patronka Śląska i Polski. Kościół uznał ją za świętą w 1267 roku. Założyła klasztor w Trzebnicy. Znana z pomocy ubogim i chorym. Jej dzień to 16 października – dzień województwa śląskiego.</p></div>
+
+<div class="card"><span class="badge bp">działacz</span><h4>Antoni Tomiczek</h4><div class="dt">1883–1942</div>
+<p>Działacz polskiego ruchu plebiscytowego w powiecie rybnickim. Organizował Polaków przed głosowaniem. Zamordowany przez nazistów podczas II wojny – ofiara terroru hitlerowskiego na Śląsku.</p></div>
+
+<div class="card"><span class="badge bp">dowódca powstań</span><h4>Alfons Zgrzebniok</h4><div class="dt">1891–1937</div>
+<p>Oficer i dowódca I oraz II powstania śląskiego (1919 i 1920). Szef tajnej Polskiej Organizacji Wojskowej Górnego Śląska. Organizował zbrojny opór Polaków. Po podziale Śląska zamieszkał w Polsce.</p></div>
+
+<div class="card"><span class="badge bp">działacz</span><h4>Józef Kassolik</h4><div class="dt">XIX/XX w.</div>
+<p>Działacz i redaktor polskich gazet na Górnym Śląsku. Pomagał budować polską świadomość wśród Ślązaków w czasach, gdy Niemcy starali się ich zgermanizować.</p></div>
+
+<div class="card"><span class="badge bn">lekarka</span><h4>Dr Jolanta Wadowska-Król</h4><div class="dt">XX w. | Katowice</div>
+<p>Lekarka, która stworzyła jeden z pierwszych w Polsce oddziałów leczenia nowotworów u dzieci. Przez wiele lat leczyła śląskie dzieci z raka. Symbol poświęcenia śląskich lekarzy.</p></div>
+
+<div class="card"><span class="badge bs">himalaizm</span><h4>Jerzy Kukuczka</h4><div class="dt">1948–1989 | Katowice</div>
+<p>Drugi człowiek na świecie, który wszedł na wszystkie 14 ośmiotysięcznych szczytów (najwyższe góry świata). Aż 8 z nich zdobył zimą – nikt na świecie nie zrobił tego więcej. Zginął w 1989 roku na Lhotse. Film dokumentalny „Kukuczka" (2016).</p></div>
+
+<div class="card"><span class="badge bs">himalaizm</span><h4>Adam Bielecki</h4><div class="dt">ur. 1983 | Gliwice</div>
+<p>Himalaista z Gliwic. Jako pierwszy na świecie wszedł zimą na Gasherbrum I (2012). W 2018 roku uratował życie alpinistce Elisabeth Revol podczas dramatycznej akcji ratunkowej na K2. Jeden z najlepszych himalaistów swojego pokolenia.</p></div>
+
+<div class="card"><span class="badge bk">muzyk</span><h4>Jan Skrzek</h4><div class="dt">ur. 1947 | Siemianowice Śl.</div>
+<p>Muzyk, współzałożyciel legendarnej grupy SBB (Szukaj, Burz, Buduj). Jeden z najważniejszych polskich muzyków rockowych lat 70. Gra na wielu instrumentach. Symbol śląskiej sceny muzycznej.</p></div>
+
+</div>
+</section>
+
+<!-- S2 INNE OSOBY -->
+<section id="s2">
+<h2 class="sec-title">Inne ważne osoby – wymienione przez organizatorów</h2>
+<div class="alert ai">Te osoby wprost pojawiają się w materiałach organizatorów – mogą być pytane w finale!</div>
+<div class="cards">
+
+<div class="card"><span class="badge bh">hutnictwo</span><h4>John Baildon</h4><div class="dt">1772–1846 | Szkocja → Gliwice</div>
+<p>Szkot, którego Prusacy sprowadzili na Śląsk jako eksperta od metali. W 1796 roku uruchomił w Gliwicach pierwszy w Europie wielki piec opalany koksem (koks = paliwo z węgla). Przełom dla całego hutnictwa. Osiadł na Śląsku na stałe. „Ojciec śląskiego hutnictwa".</p></div>
+
+<div class="card"><span class="badge bh">reformator</span><h4>Friedrich Wilhelm von Reden</h4><div class="dt">1752–1815</div>
+<p>Pruski urzędnik odpowiedzialny za śląskie górnictwo. W 1788 roku sprowadził do Tarnowskich Gór pierwszą maszynę parową poza Wielką Brytanią. Unowocześnił kopalnie i zbudował drogi oraz kanały. Dzięki niemu Śląsk stał się nowoczesnym regionem przemysłowym.</p></div>
+
+<div class="card"><span class="badge br">filantropka</span><h4>Eva von Tiele-Winckler „Mutterliczka"</h4><div class="dt">1866–1930 | Miechowice</div>
+<p>Córka bogatego przemysłowca, która porzuciła luksusowe życie, żeby pomagać biednym. Założyła sieć domów opieki dla sierot, chorych i starców. Ślązacy nazywali ją czule „Mutterliczką" (mateczką). Symbol śląskiej dobroci i wiary.</p></div>
+
+<div class="card"><span class="badge bs">piłka nożna</span><h4>Ernest Wilimowski</h4><div class="dt">1916–1997 | Katowice</div>
+<p>Jeden z najlepszych piłkarzy w historii. Na mistrzostwach świata w 1938 roku strzelił 4 gole Brazylii – to rekord Polski do dziś. Po wybuchu II WŚ stanął przed trudnym wyborem: przyjął volkslistę i grał dla Niemiec. Po wojnie uznany za zdrajcę, dziś rehabilitowany. Jego historia pokazuje, jak trudne były wybory Ślązaków podczas wojny.</p></div>
+
+<div class="card"><span class="badge bp">antynazista</span><h4>Eduard Pant</h4><div class="dt">1887–1938</div>
+<p>Niemiec, który bronił Polaków. Poseł do niemieckiego parlamentu, który głośno sprzeciwiał się Hitlerowi i bronił praw polskiej mniejszości na Śląsku Opolskim. Rzadki przykład odwagi – Niemiec stający po stronie Polaków. Prześladowany przez nazistów.</p></div>
+
+<div class="card"><span class="badge bh">pilotka</span><h4>Maria Wardasówna</h4><div class="dt">1904–1965</div>
+<p>Pierwsza Ślązaczka z licencją pilota. Jeździła też na motocyklu. W czasach, gdy kobiety rzadko robiły takie rzeczy, ona latała samolotami i ścigała się. Symbol odważnej, niezależnej śląskiej kobiety.</p></div>
+
+<div class="card"><span class="badge bh">bohaterka</span><h4>Maria Kujawska z d. Raida – „Anioł z Ravensbrück"</h4><div class="dt">1918–1943</div>
+<p>Śląska pielęgniarka więziona w obozie koncentracyjnym Ravensbrück. Ryzykując własne życie, opiekowała się chorymi współwięźniarkami. Dlatego nazywano ją „Aniołem". Zamordowana przez nazistów w wieku 25 lat.</p></div>
+
+<div class="card"><span class="badge bn">chemia / Nobel</span><h4>Fritz Haber i Clara Immerwahr</h4><div class="dt">1868–1934 | Wrocław</div>
+<p>Fritz Haber: urodzony we Wrocławiu chemik. Dostał Nagrodę Nobla (1918) za odkrycie jak produkować nawozy z powietrza – to pomogło wyżywić miliardy ludzi. Ale stworzył też broń chemiczną w I wojnie. Jego żona <strong>Clara</strong> – pierwsza kobieta z doktoratem z chemii w Niemczech – odebrała sobie życie protestując przeciwko broni gazowej męża.</p></div>
+
+<div class="card"><span class="badge bk">kompozytor</span><h4>Wojciech Kilar</h4><div class="dt">1932–2013 | Katowice</div>
+<p>Jeden z najsławniejszych polskich kompozytorów. Pisał muzykę do wielkich filmów: „Dracula" Francisa Coppoli, „Pianista" Romana Polańskiego, „Ziemia obiecana" Andrzeja Wajdy. Mieszkał w Katowicach przez całe życie.</p></div>
+
+<div class="card"><span class="badge bk">muzyka metalowa</span><h4>Kat / Roman Kostrzewski</h4><div class="dt">od 1979 | Katowice</div>
+<p>Kat to jeden z pierwszych polskich zespołów heavy metalowych. Roman Kostrzewski – wokalista z charakterystycznym głosem. Pionierzy ciężkiej muzyki w Polsce, znani też za granicą.</p></div>
+
+<div class="card"><span class="badge bk">hip-hop</span><h4>Paktofonika</h4><div class="dt">1998–2003 | Katowice i Mikołów</div>
+<p>Kultowy zespół hip-hopowy. Tworzyli go Magik (Piotr Łuszcz), Fokus (Wojciech Alszer) i Rahim (Sebastian Salbert). Ich muzyka opowiadała o życiu w śląskich osiedlach lat 90. Magik tragicznie zginął w 2000 roku. Film „Jesteś Bogiem" (2012) opowiada ich historię.</p></div>
+
+<div class="card"><span class="badge bk">blues / rock</span><h4>Dżem</h4><div class="dt">od 1973 | Tychy</div>
+<p>Legendarny śląski zespół bluesowy z Tychów. Wokalista Ryszard „Rysiek" Riedel miał niesamowity głos i tragiczne życie (uzależnienia). Film „Skazany na bluesa" (2005) opowiada jego historię. Jeden z najważniejszych polskich zespołów rockowych.</p></div>
+
+<div class="card"><span class="badge bk">malarstwo</span><h4>Grzegorz Chudy</h4><div class="dt">współczesny</div>
+<p>Śląski malarz, który maluje „bebooki" – straszydła z śląskich legend. Łączy stary śląski folklor z nowoczesnym malarstwem. Jego obrazy są rozpoznawalne i lubiane.</p></div>
+
+<div class="card"><span class="badge bk">malarstwo / mistycyzm</span><h4>Grupa Janowska</h4><div class="dt">1. poł. XX w. | Katowice-Janów</div>
+<p>Grupa śląskich artystów zainteresowanych okultyzmem i duchowością. Działali w Janowie (dziś dzielnica Katowic). Wyjątkowe środowisko w polskiej sztuce.</p></div>
+
+<div class="card"><span class="badge bp">gospodarz Śląska</span><h4>Jerzy Ziętek „Jorg"</h4><div class="dt">1901–1985 | Szopienice (Katowice)</div>
+<p>Uczestnik wszystkich trzech powstań śląskich. Więzień Auschwitz i Mauthausen – przeżył. Po wojnie przez wiele lat rządził województwem śląskim. Zbudował Park Śląski w Chorzowie (620 ha – największy park miejski w Polsce), Spodek i Stadion Śląski. Mówił po śląsku z górnikami i po urzędniczemu z władzą. Pomnik przed Spodkiem w Katowicach. Zwany „Ojcem Śląska".</p></div>
+
+<div class="card"><span class="badge bs">piłka nożna / trener</span><h4>Jan Piechniczek</h4><div class="dt">ur. 1937 | Radzionków k. Bytomia</div>
+<p>Najlepszy trener w historii polskiej piłki. Ślązak z Radzionkowa. Na mistrzostwach świata w 1982 roku w Hiszpanii poprowadził Polskę do <strong>3. miejsca na świecie</strong> – największy sukces polskiego futbolu. W składzie był m.in. Zbigniew Boniek. Jego imieniem nazwano ulicę w rodzinnym Radzionkowie.</p></div>
+
+<div class="card"><span class="badge bs">piłka nożna / GKS Katowice</span><h4>Jan Furtok</h4><div class="dt">1962–2024 | Katowice</div>
+<p>Największa legenda GKS Katowice. Napastnik, urodzony i wychowany w Katowicach. <strong>Numer 9 zastrzeżony</strong> na zawsze przez klub – żaden inny piłkarz nie założy tej koszulki.<br><br>
+<strong>W Polsce:</strong> 122 gole w 299 meczach dla GKS – rekord klubu wszech czasów. W 1986 roku strzelił <strong>hat-tricka w finale Pucharu Polski</strong> z Górnikiem Zabrze (GKS wygrał 4:1). Wicemistrz i brązowy medalista Polski.<br><br>
+<strong>W Niemczech (1988–1995):</strong> Grał w Hamburger SV i Eintracht Frankfurt. W sezonie 1990/91 strzelił 20 goli w Bundeslidze – był wtedy jednym z najlepszych snajperów w Niemczech. Przez 22 lata był najskuteczniejszym Polakiem w historii Bundesligi, dopóki nie wyprzedził go Robert Lewandowski.<br><br>
+<strong>Reprezentacja:</strong> 36 meczów, 10 goli. Uczestnik MŚ 1986 w Meksyku.<br><br>
+<strong>Po karierze:</strong> Trener młodzieży, dyrektor sportowy i prezes GKS. W ostatnich latach chorował na Alzheimera. Nowy stadion miejski w Katowicach ma nosić jego imię. Honorowany przez Prezydenta RP Krzyżem Oficerskim Orderu Odrodzenia Polski.</p></div>
+
+<div class="card"><span class="badge bs">piłka nożna / Ruch Chorzów / Grecja</span><h4>Krzysztof Warzycha</h4><div class="dt">ur. 1964 | Katowice</div>
+<p>Śląski piłkarz, który stał się legendą… w Grecji. Wychowanek i wieloletni zawodnik <strong>Ruchu Chorzów</strong> – Niebieskiej Gwiazdy. Napastnik z fenomenalnym instynktem bramkowym.<br><br>
+<strong>W Polsce (Ruch Chorzów):</strong> Król strzelców ekstraklasy w sezonie 1988/89. Jeden z najlepszych napastników swojego pokolenia.<br><br>
+<strong>W Grecji (Panathinaikos, 1989–2004!):</strong> Tu zrobił największą karierę. Przez 15 lat w Panathinaikosie strzelił <strong>319 goli w 509 meczach</strong> – jest bezapelacyjnie najlepszym strzelcem w historii tego klubu. Trzykrotny król strzelców greckiej ekstraklasy (1994, 1995, 1998). Zdobył 5 mistrzostw Grecji i 3 Puchary Grecji. W Lidze Mistrzów strzelił gola Ajaxowi w Amsterdamie (1996), dając Panathinaikosowi historyczne zwycięstwo. W 2001 roku zrównał się z rekordem najskuteczniejszego strzelca w historii greckiej ligi. Uzyskał obywatelstwo greckie (1998). Kandydował nawet do greckiego parlamentu!<br><br>
+<strong>Reprezentacja Polski:</strong> 50 meczów, 9 goli.<br><br>
+<strong>Honorowy obywatel Chorzowa.</strong> Ikona zarówno Śląska, jak i greckiej piłki.</p></div>
+
+</div>
+</section>
+
+<!-- S3 HISTORIA XIX -->
+<section id="s3">
+<h2 class="sec-title">Historia Śląska – industrializacja w XIX wieku</h2>
+
+<h3>Co to jest industrializacja?</h3>
+<div class="ev ind">
+<p>Industrializacja to zamiana wsi w fabryki. Na Śląsku oznaczała: zamiast pól i lasów – kopalnie, huty i dymiące kominy. Setki tysięcy ludzi porzuciło rolnictwo i przeniosło się do miast, żeby pracować pod ziemią lub przy piecach. To całkowicie zmieniło Śląsk w XIX wieku.</p>
+</div>
+
+<h3>Ważne daty – jak rozwijał się przemysł</h3>
+<div class="tl">
+<div class="tli"><div class="yr">1742</div><div class="ti">Śląsk staje się pruski</div><div class="td">Fryderyk Wielki (król Prus) wygrywa wojnę z Austrią i przejmuje większość Śląska. Odtąd przez 176 lat Górny Śląsk jest pod Niemcami (najpierw Prusy, potem Cesarstwo Niemieckie).</div></div>
+<div class="tli"><div class="yr">1788</div><div class="ti">Pierwsza maszyna parowa poza Anglią – Tarnowskie Góry</div><div class="td">Pruski urzędnik von Reden sprowadza maszynę parową do kopalni w Tarnowskich Górach. To pierwszy taki przypadek poza Wielką Brytanią. Śląsk wchodzi w erę nowoczesnego przemysłu.</div></div>
+<div class="tli"><div class="yr">1796</div><div class="ti">Wielki piec na koks – John Baildon w Gliwicach</div><div class="td">Szkot Baildon uruchamia piec, który topi żelazo używając koksu zamiast drewna. Przełom w hutnictwie – taniej, szybciej, więcej stali.</div></div>
+<div class="tli"><div class="yr">1800–1850</div><div class="ti">Era Goduli i wielki boom przemysłowy</div><div class="td">Karol Godula buduje imperium kopalni cynku. Rosną miasta: Katowice, Królewska Huta (Chorzów), Zabrze, Bytom. Tysiące robotników przyjeżdżają za pracą.</div></div>
+<div class="tli"><div class="yr">1865</div><div class="ti">Katowice dostają prawa miejskie</div><div class="td">Mała wioska staje się miastem. Dzięki kolei i przemysłowi rośnie błyskawicznie.</div></div>
+<div class="tli"><div class="yr">1871</div><div class="ti">Śląsk w Cesarstwie Niemieckim</div><div class="td">Po zjednoczeniu Niemiec Śląsk staje się częścią nowego Cesarstwa. Niemcy inwestują w przemysł, szkoły i kolej – ale też germanizują Ślązaków.</div></div>
+<div class="tli"><div class="yr">1903</div><div class="ti">Korfanty wchodzi do parlamentu Niemiec</div><div class="td">Sensacja! Pierwszy Polak z terenów pruskich zostaje posłem do Reichstagu. Przemawia po polsku w Berlinie.</div></div>
+</div>
+
+<h3>Wielcy przemysłowcy Górnego Śląska</h3>
+<table>
+<tr><th>Osoba</th><th>Lata</th><th>Co zrobił</th></tr>
+<tr><td><strong>Friedrich Wilhelm von Reden</strong></td><td>1752–1815</td><td>Pruski urzędnik odpowiedzialny za górnictwo. Sprowadził pierwszą maszynę parową na kontynent (1788). Budował drogi i kanały. Bez niego nowoczesny przemysł śląski powstałby znacznie później.</td></tr>
+<tr><td><strong>John Baildon</strong></td><td>1772–1846</td><td>Szkocki metalurg. Uruchomił pierwszy koksowy wielki piec w Gliwicach (1796). Wprowadził angielskie technologie do śląskich hut. Osiadł na Śląsku do końca życia.</td></tr>
+<tr><td><strong>Karol Godula</strong></td><td>1781–1848</td><td>Syn górnika, który od zera zbudował imperium. Właściciel dziesiątek kopalń cynku. Jeden z najbogatszych ludzi w Europie. Adoptował Joannę Gryzik i zostawił jej wszystko.</td></tr>
+<tr><td><strong>Hugo Henckel von Donnersmarck</strong></td><td>1810–1890</td><td>Hrabia i przemysłowiec, jeden z najbogatszych ludzi w Prusach. Właściciel kopalń węgla i hut. Ród Donnersmarcków był jednym z najpotężniejszych na Śląsku przez wieki.</td></tr>
+<tr><td><strong>Franz Winckler</strong></td><td>1803–1851</td><td>Wielki przemysłowiec z Miechowic. Ojciec Evy von Tiele-Winckler (Mutterliczki). Właściciel kopalń i hut w okolicach Bytomia.</td></tr>
+</table>
+
+<h3>Wielkie rody arystokratyczne Górnego Śląska</h3>
+<table>
+<tr><th>Ród</th><th>Siedziba</th><th>Czym byli znani</th></tr>
+<tr><td><strong>Donnersmarcki</strong></td><td>Świerklaniec, Tarnowskie Góry</td><td>Jeden z najbogatszych rodów Śląska. Kopalnie węgla i cynku, huty. Przez pokolenia władali ogromną częścią Górnego Śląska. Guido von Donnersmarck był tak bogaty, że Hollywood nakręcił o nim film.</td></tr>
+<tr><td><strong>Hochberg von Pless</strong></td><td>Zamek w Pszczynie</td><td>Właściciele Pszczyny. Jan Henryk XV von Pless był mężem Księżnej Daisy. W ich zamku bywał cesarz Niemiec Wilhelm II.</td></tr>
+<tr><td><strong>Schaffgotschowie</strong></td><td>Kopice, Godula</td><td>Stary ród arystokratyczny. Joanna Gryzik (adoptowana córka Goduli) wniosła do rodu ogromną fortunę po ślubie z hrabią Schaffgotschem.</td></tr>
+<tr><td><strong>Ballestremowie</strong></td><td>Pławniowice, Ruda</td><td>Włosko-śląski ród arystokratyczny. U hrabiego Ballestrema pracował młody Karol Godula – zanim się usamodzielnił i sam stał się bogaczem. Franz von Ballestrem był nawet przewodniczącym parlamentu Niemiec.</td></tr>
+<tr><td><strong>Tiele-Wincklerowie</strong></td><td>Miechowice (Bytom)</td><td>Ród przemysłowy. Z tej rodziny pochodzi Eva (Mutterliczka), która rozdała majątek biednym.</td></tr>
+</table>
+
+<h3>Jak Prusy / Niemcy rozwinęły Śląsk?</h3>
+<div class="alert ag">To ważny kontekst: Śląsk pod Niemcami naprawdę się rozwinął. Ślązacy mieli powody, żeby cenić pruskie państwo – i to tłumaczy wynik plebiscytu.</div>
+<table>
+<tr><th>Dziedzina</th><th>Co zbudowały Prusy</th></tr>
+<tr><td><strong>Szkoły</strong></td><td>Każda wioska miała szkołę (Volksschule). Obowiązek szkolny od 1717 roku! Ślązacy umieli czytać i pisać – lepiej niż w większości Europy. Ale szkoły były wyłącznie po niemiecku – to germanizowało dzieci.</td></tr>
+<tr><td><strong>Kolej</strong></td><td>Gęsta sieć kolejowa od lat 40. XIX w. Najgęstsza w Europie. Kolej = szybki transport węgla i stali = więcej pieniędzy.</td></tr>
+<tr><td><strong>Drogi i kanały</strong></td><td>Kanał Kłodnicki (1812) łączył kopalnie z rzeką Odrą. Utwardzone drogi (Chausseen) łączyły wszystkie ważne miejsca.</td></tr>
+<tr><td><strong>Szpitale i ubezpieczenia</strong></td><td>Bismarck wprowadził w 1883 roku pierwsze na świecie obowiązkowe ubezpieczenie zdrowotne. Śląscy górnicy płacili składkę i mogli iść do lekarza za darmo. W 1884 roku – ubezpieczenie od wypadków przy pracy. W 1889 – emerytury. Ślązacy mieli to wszystko, gdy reszta Europy jeszcze nie.</td></tr>
+<tr><td><strong>Knappschaft (bractwa górnicze)</strong></td><td>Stare organizacje wzajemnej pomocy górników. Pod Prusami rozbudowane i oficjalne. Płaciły renty wdowom po górnikach, finansowały leczenie chorych.</td></tr>
+<tr><td><strong>Elektrownie</strong></td><td>Kraftwerk Oberschlesien w Bytomiu (1896) – jedna z pierwszych elektrowni w regionie. Do 1914 większość śląskich fabryk miała elektryczność.</td></tr>
+</table>
+</section>
+
+<!-- S4 POWSTANIA -->
+<section id="s4">
+<h2 class="sec-title">Powstania śląskie i plebiscyt</h2>
+<div class="alert ad">Najważniejszy temat historyczny! Znaj daty, dowódców i skutki każdego powstania.</div>
+
+<h3>Dlaczego doszło do powstań?</h3>
+<div class="ev ple">
+<p>Po klęsce Niemiec w I wojnie światowej (1918) alianci zdecydowali, że o przynależności Górnego Śląska zadecydują sami mieszkańcy w głosowaniu (plebiscyt). Zanim do niego doszło, niemieccy żołnierze i bojówki terroryzowali polskich działaczy. Polacy chwycili za broń – trzy razy.</p>
+</div>
+
+<h3>Kto stacjonował na Śląsku w latach 1919–1921?</h3>
+<table>
+<tr><th>Formacja</th><th>Strona</th><th>Co robiła</th></tr>
+<tr><td><strong>Komisja Międzysojusznicza</strong></td><td>Alianci (Liga Narodów)</td><td>Sprawowała władzę na Śląsku w czasie plebiscytu (1920–1922). Siedziba w Opolu. Decydowała o porządku.</td></tr>
+<tr><td><strong>Gen. Henri Le Rond (Francja)</strong></td><td>Alianci – po stronie Polski</td><td>Szef Komisji Międzysojuszniczej. Francuz, który sympatyzował z Polską. Jego pozytywna postawa pomogła Polsce dostać uprzemysłowaną część Śląska mimo przegranego plebiscytu.</td></tr>
+<tr><td><strong>Gen. Harold Ruggles-Brise (Wielka Brytania)</strong></td><td>Alianci – po stronie Niemiec</td><td>Brytyjski członek komisji. Sympatyzował z Niemcami. Naciskał na wstrzymanie polskich powstań.</td></tr>
+<tr><td><strong>Wojska alianckie</strong></td><td>Alianci</td><td>Francuskie, brytyjskie i włoskie oddziały jako siły rozjemcze. Francuzi byli przyjaźniejsi Polsce.</td></tr>
+<tr><td><strong>Grenzschutz (Straż Graniczna)</strong></td><td>Niemcy</td><td>Paramilitarna straż, która terroryzowała Polaków. Jej brutalne działania wywołały I powstanie (1919). Rozwiązana po II powstaniu.</td></tr>
+<tr><td><strong>Freikorpsy (Oberland i inne)</strong></td><td>Niemcy</td><td>Ochotnicze bojówki z weteranów I WŚ, ściągnięte spoza Śląska. Walczyły w III powstaniu, m.in. przy Górze Świętej Anny.</td></tr>
+<tr><td><strong>POW GŚl</strong></td><td>Polska</td><td>Polska Organizacja Wojskowa Górnego Śląska – tajna organizacja zbrojna. Szef: Alfons Zgrzebniok. Przygotowywała powstania.</td></tr>
+</table>
+
+<h3>Trzy powstania śląskie</h3>
+<table>
+<tr><th></th><th>I Powstanie</th><th>II Powstanie</th><th>III Powstanie</th></tr>
+<tr><td><strong>Data</strong></td><td>16–26 VIII 1919</td><td>19–25 VIII 1920</td><td>2/3 V – 5 VII 1921</td></tr>
+<tr><td><strong>Dowódca</strong></td><td>Alfons Zgrzebniok</td><td>Alfons Zgrzebniok</td><td>Wojciech Korfanty</td></tr>
+<tr><td><strong>Powód</strong></td><td>Terror Grenzschutzu, masakra w Mysłowicach</td><td>Strajk + sukces Polski w wojnie z Rosją (Cud nad Wisłą)</td><td>Zły wynik plebiscytu dla Polski</td></tr>
+<tr><td><strong>Wynik</strong></td><td>Klęska – stłumione po 10 dniach</td><td>Sukces: alianci rozwiązują Grenzschutz</td><td>Przerwane przez aliantów po 2 miesiącach</td></tr>
+<tr><td><strong>Ważna bitwa</strong></td><td>–</td><td>–</td><td>Góra Świętej Anny (Annaberg) – Niemcy odbijają wzgórze</td></tr>
+<tr><td><strong>Skutek</strong></td><td>Mobilizacja Polaków</td><td>Lepsza sytuacja przed plebiscytem</td><td>Liga Narodów daje Polsce uprzemysłowaną część Śląska</td></tr>
+</table>
+
+<div class="mn"><div class="lb">Zapamiętaj!</div><div class="tx"><em>ZZK</em> = <em>Z</em>grzebniok (I), <em>Z</em>grzebniok (II), <em>K</em>orfanty (III)</div></div>
+
+<h3>Wojciech Korfanty – kim był i co zrobił?</h3>
+<div class="ev aut">
+<h4>Najważniejszy śląski polityk w historii</h4>
+<p><strong>Początki:</strong> Urodzony 1873 w Siemianowicach w rodzinie górniczej. Syn prostego górnika, który wykształcił się ciężką pracą.</p>
+<p style="margin-top:8px"><strong>Przed I wojną:</strong><br>
+– 1901: założył polską gazetę „Górnoślązak" walczącą z germanizacją<br>
+– 1903: wybrany posłem do Reichstagu – pierwszy Polak z Prus w niemieckim parlamencie. Przemówił po polsku w Berlinie – wielka sensacja!<br>
+– Buduje polskie organizacje i partie na Śląsku</p>
+<p style="margin-top:8px"><strong>Walka o Śląsk (1918–1921):</strong><br>
+– Zostaje Polskim Komisarzem Plebiscytowym – szefem polskiej akcji przed głosowaniem<br>
+– Buduje dobre relacje z gen. Le Rondem (Francja) – to mu pomoże po plebiscycie<br>
+– Po złym wyniku plebiscytu ogłasza III powstanie (noc 2/3 maja 1921)<br>
+– Zostaje „dyktatorem" powstania – Naczelnikiem Władzy na Górnym Śląsku<br>
+– Pod presją Wielkiej Brytanii wstrzymuje walki 5 lipca 1921<br>
+– Liga Narodów przyznaje Polsce uprzemysłowaną część Śląska – wielki sukces!</p>
+<p style="margin-top:8px"><strong>Po podziale Śląska:</strong><br>
+– Poseł w polskim Sejmie<br>
+– Konflikt z Piłsudskim i sanacją – jest w opozycji<br>
+– 1930: aresztowany w słynnej „nocy brzeskiej" razem z innymi przeciwnikami rządu<br>
+– Emigruje do Czechosłowacji (1935)<br>
+– Wraca 1939, znów aresztowany. Umiera 17 VIII 1939 w Warszawie. Podejrzenie, że go otruto.<br>
+– Tysiące Ślązaków żegnało go na pogrzebie.</p>
+</div>
+
+<h3>Plebiscyt – 20 marca 1921</h3>
+<div class="ev ple">
+<h4>Głosowanie, które zdecydowało o Śląsku</h4>
+<p><strong>Wynik:</strong> Za Niemcami: <strong>707 605 głosów (59,6%)</strong> | Za Polską: <strong>479 359 głosów (40,4%)</strong><br><br>
+<strong>Dlaczego Polska przegrała mimo polskiej większości?</strong><br>
+– Niemcy przywieźli ok. 182 000 byłych mieszkańców Śląska (mogli głosować, bo się tu urodzili)<br>
+– Właściciele kopalń (głównie Niemcy) straszyli robotników: „Głosujesz za Polską = tracisz pracę"<br>
+– Ślązacy bali się biednej, nowej Polski – woleli zostać z bogatymi, sprawnie działającymi Niemcami<br>
+– Niemcy wydali znacznie więcej na propagandę<br><br>
+<strong>Ale Polska jednak dostała kawałek Śląska!</strong> Liga Narodów (październik 1921) zdecydowała wbrew wynikom: Polska dostaje 1/3 terytorium, ale za to <strong>80% przemysłu</strong>: Katowice, Chorzów, Rybnik, Tarnowskie Góry. Kluczową rolę odegrał gen. Le Rond (Francja), który popierał Polskę.</p>
+</div>
+
+<h3>Bitwa o Górę Świętej Anny</h3>
+<div class="ev pow">
+<div class="yr">21–26 maja 1921</div>
+<h4>Najważniejsza bitwa III powstania</h4>
+<p>Góra Świętej Anny (Annaberg, 404 m) – wzgórze z sanktuarium pielgrzymkowym. Polscy powstańcy zajęli je na początku powstania. Niemcy (Freikorps Oberland) zaatakowali i po ciężkich walkach odbiją wzgórze. Setki zabitych po obu stronach. Symboliczne miejsce dla Polaków i Niemców. Dziś polskie sanktuarium i park krajobrazowy.</p>
+</div>
+</section>
+
+<!-- S5 II WS PRL -->
+<section id="s5">
+<h2 class="sec-title">II Wojna Światowa i PRL na Śląsku</h2>
+
+<h3>Prowokacja gliwicka – 31 sierpnia 1939</h3>
+<div class="ev woj">
+<div class="yr">31 VIII 1939, wieczór</div>
+<h4>Fałszywy atak na radiostację w Gliwicach</h4>
+<p>Niemieccy żołnierze SS przebrali się za polskich napastników i „zaatakowali" radiostację w Gliwicach. Nadali kilka zdań po polsku przez mikrofon. Zostawili ciała więźniów z obozu koncentracyjnego jako „dowody" na polską agresję.<br><br>
+<strong>Po co?</strong> Żeby Hitler miał pretekst do napaści na Polskę. Następnego dnia (1 IX 1939) Niemcy zaatakowały Polskę – zaczęła się II wojna światowa.<br><br>
+<strong>Radiostacja:</strong> Wzniesiona 1935 r., 111 m wysokości. Najwyższa drewniana wieża na świecie. Dziś muzeum, które można odwiedzić.</p>
+</div>
+
+<h3>Śląsk pod Niemcami (1939–1945)</h3>
+<table>
+<tr><th>Co się działo</th><th>Wyjaśnienie</th></tr>
+<tr><td><strong>Wcielenie do III Rzeszy</strong></td><td>Cały Górny Śląsk stał się częścią Niemiec. Nie było tu Generalnej Guberni – Niemcy traktowali Śląsk jak swoje własne terytorium.</td></tr>
+<tr><td><strong>Volksliście</strong></td><td>Niemcy wpisywali Ślązaków na listy narodowościowe. Część z własnej woli, część pod przymusem. Wpisanie na volklistę 3. grupy = obowiązkowe wojsko w armii Niemiec. Dylemat: zgodzić się i żyć, odmówić i ryzykować obóz.</td></tr>
+<tr><td><strong>Praca przymusowa</strong></td><td>Kopalnie i huty pracowały dla armii Niemiec. Jeńcy wojenni i więźniowie pracowali przymusowo.</td></tr>
+</table>
+
+<h3>Tragedia Górnośląska – 1945</h3>
+<div class="ev tra">
+<div class="yr">Styczeń–maj 1945</div>
+<h4>Deportacje do sowieckich łagrów</h4>
+<p>Kiedy Armia Czerwona wkroczyła na Śląsk w styczniu 1945 roku, zaczęła masowe wywózki mieszkańców do pracy przymusowej w Związku Radzieckim.<br><br>
+– Ok. <strong>80 000–90 000</strong> Ślązaków wywieziono do łagrów (głównie w obwód doniecki na Ukrainie)<br>
+– Wśród deportowanych: zwykli cywile, górnicy, kobiety, mężczyźni zdolni do pracy<br>
+– Ok. 15 000–20 000 osób zginęło w łagrach z głodu, chorób i wyczerpania<br>
+– W PRL przez dziesięciolecia nie wolno było o tym mówić. Dopiero po 1989 r. otwarto archiwa.<br>
+– Nazywana „śląską golgotą" – największa tragedia cywilna Śląska w XX wieku.</p>
+</div>
+
+<h3>Śląsk w PRL (1945–1989)</h3>
+<div class="ev woj">
+<h4>Wielka zmiana po wojnie</h4>
+<p>– Niemców wysiedlono ze Śląska (1945–1947), na ich miejsce przyszli Polacy z Kresów Wschodnich (dziś Ukraina, Litwa, Białoruś) oraz z innych części Polski<br>
+– Komuniści zlikwidowali autonomię śląską w 1945 roku<br>
+– Kopalnie i huty pracowały pełną parą – Śląsk finansował odbudowę całej Polski<br>
+– Budowa nowych miast: Tychy (od 1950 r.), rozbudowa Jastrzębia-Zdroju<br>
+– Tożsamość śląska była tłumiona: godkę nazywano „gwarą", nie językiem. Ślązacy mieli być „po prostu Polakami"</p>
+</div>
+
+<h3>Pacyfikacja Kopalni Wujek – 16 grudnia 1981</h3>
+<div class="ev tra">
+<div class="yr">16 XII 1981 | Katowice</div>
+<h4>Milicja strzela do górników</h4>
+<p>Trzy dni po wprowadzeniu stanu wojennego (13 XII 1981) górnicy kopalni Wujek w Katowicach ogłosili strajk. 16 grudnia oddziały milicji (ZOMO) weszły do kopalni z bronią palną.<br><br>
+<strong>Zginęło 9 górników.</strong> Ich imiona: Józef Czekalski, Krzysztof Giełżyński, Joachim Gnida, Ryszard Gzik, Bogusław Kopczak, Andrzej Pełka, Jan Stawisiński, Zbigniew Wilk, Zenon Zając.<br><br>
+Sprawcy zostali osądzeni dopiero po 1989 r. Tablica pamiątkowa przy kopalni. Jeden z symboli walki z komunizmem w Polsce.</p>
+</div>
+
+<h3>Porozumienia Jastrzębskie – 3 września 1980</h3>
+<div class="ev aut">
+<h4>Górnicy tworzą „Solidarność"</h4>
+<p>Strajkujący górnicy z Jastrzębia-Zdroju podpisali z rządem porozumienie, które stało się jednym z fundamentów niezależnego związku zawodowego „Solidarność". Jastrzębie-Zdrój – dawne uzdrowisko siarczkowe słynne w Europie, zamienione w miasto górnicze po odkryciu węgla.</p>
+</div>
+</section>
+
+<!-- S6 MIEJSCA -->
+<section id="s6">
+<h2 class="sec-title">Miejsca – obowiązkowe z oficjalnego spisu</h2>
+<div class="alert aw">Te 7 miejsc jest w oficjalnym spisie Silesia Incognita 2026!</div>
+
+<div class="pc"><div class="ic">🏘️</div><div><h4>Nikiszowiec (Katowice)</h4><div class="mt">1908–1918 | oficjalny spis | Pomnik Historii od 2011</div>
+<p>Osiedle zbudowane dla górników kopalni Giesche (dziś Wieczorek). Projektanci: <strong>Georg i Emil Zillmann</strong>. 7 zamkniętych kwartałów z czerwonej cegły, ok. 1000 mieszkań. W środku: kościół, sklep, pralnia, szkoła, posterunek policji. Robotnicy zależeli od właściciela kopalni dosłownie we wszystkim. W 1978 r. wpisany do rejestru zabytków, w 2011 r. uznany Pomnikiem Historii przez Prezydenta RP. Dziś modna dzielnica artystyczna Katowic.</p>
+<p style="margin-top:8px"><strong>Skąd pochodzi nazwa?</strong> Od szybu kopalnianego <em>„Nickischschacht"</em> (dziś szyb „Poniatowski"). Ten szyb nazwano na cześć barona <strong>Nickischa von Rosenegk</strong> – członka rady nadzorczej spółki Georg von Giesches Erben. Nickischschacht → Nikisz → Nikiszowiec.</p>
+<p style="margin-top:8px"><strong>Co warto zobaczyć:</strong></p>
+<table style="font-size:12px;margin-top:4px"><tr><th>Miejsce</th><th>Co to jest</th></tr>
+<tr><td>Plac Wyzwolenia</td><td>Centralny plac osiedla – „rynek" Nikiszowca. Tu tętni życie dzielnicy, odbywają się jarmarki.</td></tr>
+<tr><td>Kościół św. Anny</td><td>Monumentalny kościół wybudowany razem z osiedlem – centrum duchowe górniczej społeczności.</td></tr>
+<tr><td>Muzeum Historii Katowic (ul. Rymarska 4)</td><td>W dawnej pralni. Wystawy o historii osiedla i życiu górników. Wstęp bezpłatny (poza wystawami specjalnymi).</td></tr>
+<tr><td>Galeria Szyb Wilson (ul. Oswobodzenia 1)</td><td>Galeria sztuki w dawnym szybie kopalni Wieczorek. Wystawy młodych artystów – malarzy, grafików, fotografów.</td></tr>
+<tr><td>ul. Św. Anny</td><td>Najpiękniejsza i najczęściej fotografowana ulica Nikiszowca.</td></tr>
+<tr><td>Śląska Prohibicja (restauracja)</td><td>Kultowa restauracja na Nikiszowcu. Specjalność: tradycyjna <strong>rolada śląska z kluskami i modrą kapustą</strong>. Elegancki klimat w industrialnym otoczeniu.</td></tr>
+<tr><td>Cafe Byfyj (bistro, ul. Krawczyka)</td><td>Klimatyczne bistro i kawiarnia. Wystrój rodem ze śląskiej kuchni. Dobre śniadania i domowe wypieki.</td></tr>
+<tr><td>Jarmark na Nikiszu</td><td>Dwa razy w roku (m.in. grudzień) – jarmark ze śląską żywnością, rękodziełem i muzyką na Placu Wyzwolenia.</td></tr>
+<tr><td>Filmy kręcone na Nikiszowcu</td><td>„Sól ziemi czarnej" i „Perła w koronie" Kazimierza Kutza. Osiedle jako naturalna scenografia śląskich filmów.</td></tr>
+</table>
+</div></div>
+
+<div class="pc"><div class="ic">🌳</div><div><h4>Giszowiec (Katowice) – miasto-ogród</h4><div class="mt">1907–1910 | Szlak Zabytków Techniki</div>
+<p>Siostrzyca Nikiszowca – drugie wielkie osiedle patronackie wybudowane przez spółkę Giesches Erben dla górników tej samej kopalni.</p>
+<p style="margin-top:8px"><strong>Skąd pochodzi nazwa?</strong> Od nazwiska <strong>Georga von Gieschego</strong> – XVII-wiecznego kupca z Wrocławia, który dostał od Habsburgów monopol na wydobycie cynku na Śląsku. Spółka „Spadkobiercy Gieschego" (Georg von Giesches Erben) nadała osiedlu niemiecką nazwę <em>Gieschewald</em> (las Gieschego – bo zbudowano je na skraju lasu). Spolszczona wersja: Gieschewald → Giszowiec. Polonizacja nazwy nastąpiła w 1922 r. W PRL przemianowane na „Osiedle Stanisława Staszica" (1979–1990), potem przywrócono Giszowiec.</p>
+<p style="margin-top:8px"><strong>Los w PRL:</strong> W 1969 r. władze zdecydowały o wyburzeniu „niechlubnej niemieckiej pozostałości". Zburzono 2/3 osiedla i postawiono bloki z wielkiej płyty. Ten dramat pokazuje film Kutza „Paciorki jednego różańca" (1979). Dziś zachowana 1/3 – objęta ochroną konserwatorską.</p>
+<p style="margin-top:8px"><strong>Co warto zobaczyć:</strong> Plac Pod Lipami (dawny rynek), dawna gospoda (dziś restauracja „Dworek pod Lipami"), Gawlikówka – siedziba Izby Śląskiej z pracami Grupy Janowskiej, wieża ciśnień, willa nadleśniczego z wieżyczką i zegarem.</p>
+<p style="margin-top:8px"><strong>Ciekawostka:</strong> W czasie powstań śląskich 72% głosujących w Giszowcu i Nikiszowcu opowiedziało się za Polską – wyjątkowo wysoki wynik!</p>
+</div></div>
+
+<div class="pc"><div class="ic">📡</div><div><h4>Radiostacja w Gliwicach</h4><div class="mt">1935 | oficjalny spis</div>
+<p>Drewniana wieża radiowa, <strong>111 m</strong> wysokości – najwyższa drewniana budowla na świecie. Zbudowana w 1935 r. Wieczorem 31 VIII 1939 roku niemieccy żołnierze SS upozorowali tu „polski atak" – pretekst do rozpoczęcia II WŚ. Dziś muzeum.</p></div></div>
+
+<div class="pc"><div class="ic">🏰</div><div><h4>Zamek w Pszczynie</h4><div class="mt">przebudowa XIX w. | oficjalny spis</div>
+<p>Piękny zamek rodziny <strong>Hochberg von Pless</strong>. Mieszkała tu <strong>Księżna Daisy</strong>. Słynny <strong>gabinet luster</strong>. W czasie I WŚ (1914–1917) mieszkał tu cesarz Niemiec Wilhelm II i planował wojnę. Dziś muzeum z bogatymi wnętrzami. W parku – rezerwat żubrów.</p></div></div>
+
+<div class="pc"><div class="ic">🏛️</div><div><h4>Pałac w Pławniowicach</h4><div class="mt">XIX w. | gmina Rudziniec | oficjalny spis</div>
+<p>Neogotycki pałac zbudowany dla rodu von Reischach, potem Schaffgotschów. Park angielski z jeziorem. Przykład arystokratycznej rezydencji z epoki pruskiej. Dziś centrum kultury.</p></div></div>
+
+<div class="pc"><div class="ic">🛸</div><div><h4>Spodek (Katowice)</h4><div class="mt">1964–1971 | oficjalny spis</div>
+<p>Hala w kształcie latającego spodka. Projekt: <strong>Maciej Gintowt</strong>. Pojemność ok. 11 000 osób. Symbol Katowic i PRL-owskiej architektury. Wielkie koncerty (tu grał Led Zeppelin w 1980!), mecze, imprezy. Zbudowany z inicjatywy Jerzego Ziętka.</p></div></div>
+
+<div class="pc"><div class="ic">🏡</div><div><h4>Gogołowa</h4><div class="mt">gmina Rudziniec | oficjalny spis</div>
+<p>Wieś na Górnym Śląsku z wielowiekową historią. W konkursie pojawia się jako przykład lokalnego dziedzictwa – typowa śląska wieś z kościołem i historycznym dworem.</p></div></div>
+
+<div class="pc"><div class="ic">🛁</div><div><h4>Jastrzębie-Zdrój – historia uzdrowiska</h4><div class="mt">XIX w. → miasto górnicze | oficjalny spis</div>
+<p>W XIX w. słynne europejskie uzdrowisko siarczkowe – przyjeżdżali tu bogaci kuracjusze z całej Europy. W XX w. odkryto węgiel – miasto stało się górnicze. Tu w 1980 r. podpisano <strong>Porozumienia Jastrzębskie</strong> – jeden z fundamentów „Solidarności".</p></div></div>
+
+<h3>Inne ważne miejsca</h3>
+<table>
+<tr><th>Miejsce</th><th>Co warto wiedzieć</th></tr>
+<tr><td><strong>Park Śląski (Chorzów)</strong></td><td>620 ha – największy park miejski w Polsce. Zbudowany z inicjatywy Jerzego Ziętka na terenach poprzemysłowych. Otwarty 1955. W środku: Stadion Śląski, Planetarium, Zoo, wesołe miasteczko (Legendia), skansen.</td></tr>
+<tr><td><strong>Planetarium i Obserwatorium (Chorzów)</strong></td><td>Kopuła o średnicy 23 m, projektor Zeiss. Otwarte 1955. Jedno z największych planetariów w Polsce.</td></tr>
+<tr><td><strong>Stadion Śląski „Kocioł Czarownic" (Chorzów)</strong></td><td>54 000 miejsc po modernizacji 2017. Inicjator: Jerzy Ziętek. Tu grają mecze reprezentacji Polski.</td></tr>
+<tr><td><strong>Browar Tyski (Tychy)</strong></td><td>Założony w 1629 roku przez książąt pszczyńskich (ród Promnitz). Jeden z najstarszych działających browarów w Polsce. Dziś marka Tyskie należy do Asahi. Muzeum piwowarstwa.</td></tr>
+<tr><td><strong>Kraftwerk Oberschlesien (Bytom)</strong></td><td>Dawna elektrownia z 1896 r. Ceglane hale i kominy – zabytek architektury przemysłowej. Na Szlaku Zabytków Techniki.</td></tr>
+<tr><td><strong>Osiedle Tysiąclecie (Katowice)</strong></td><td>Wielkie osiedle z wielkiej płyty (od 1959 r.), ok. 50 000 mieszkańców. Nazwa upamiętnia 1000-lecie państwa polskiego (obchodzone 1966).</td></tr>
+<tr><td><strong>Kopalnia Guido (Zabrze)</strong></td><td>Jedyna działająca turystycznie kopalnia w Polsce. Zjazd na 320 m. Dziś muzeum i bar pod ziemią.</td></tr>
+<tr><td><strong>Sztolnia Czarnego Pstrąga (Tarnowskie Góry)</strong></td><td>XIX-wieczna podziemna sztolnia. UNESCO od 2017 r. – pierwsza polska UNESCO związana z górnictwem. Trasa łodziami pod ziemią.</td></tr>
+<tr><td><strong>Szlak Zabytków Techniki</strong></td><td>35 obiektów: huty, kopalnie, elektrownie. Unikatowy europejski szlak dziedzictwa przemysłowego.</td></tr>
+</table>
+</section>
+
+<!-- S7 ARCHITEKTURA -->
+<section id="s7">
+<h2 class="sec-title">Architektura Górnego Śląska</h2>
+
+<h3>Style architektoniczne</h3>
+<table>
+<tr><th>Styl</th><th>Przykłady</th><th>Jak wygląda</th></tr>
+<tr><td><strong>Architektura patronacka</strong> (XIX–XX w.)</td><td>Nikiszowiec, Giszowiec (Katowice)</td><td>Osiedla robotnicze budowane przez właścicieli kopalń. Czerwona cegła, zamknięte kwartały, wszystko wewnątrz (sklep, kościół, pralnia). Robotnicy zależni od pracodawcy we wszystkim.</td></tr>
+<tr><td><strong>Familok</strong> (XIX–XX w.)</td><td>Chorzów, Ruda Śląska, Bytom</td><td>Dom robotniczy. Kilka rodzin w jednym budynku. Wspólne podwórko-studnia, pralnia, wychodek. Symbol śląskiego życia robotniczego.</td></tr>
+<tr><td><strong>Neogotyk</strong> (XIX w.)</td><td>Pałac w Pławniowicach, Zamek w Mosznej</td><td>Nawiązanie do średniowiecza – wieżyczki, ostrołuki. Popularne wśród arystokracji pruskiej.</td></tr>
+<tr><td><strong>Neobarok</strong> (XVIII–XIX w.)</td><td>Zamek w Pszczynie</td><td>Bogato zdobione wnętrza, symetria, przepych. Zamek w Pszczynie przebudowany w tym stylu w XIX w.</td></tr>
+<tr><td><strong>Modernizm PRL</strong> (1945–1989)</td><td>Spodek Katowice, osiedla z wielkiej płyty</td><td>Proste formy, funkcjonalność. Spodek – wyjątek: awangarda na skalę europejską. Wielka płyta – masowe budownictwo mieszkaniowe.</td></tr>
+<tr><td><strong>Architektura przemysłowa</strong> (XIX–XX w.)</td><td>Kopalnie, huty, radiostacja, elektrownie</td><td>Ceglane hale, wieże wyciągowe (koło zamachowe nad szybem), kominy. Dziś wiele zamieniono na muzea.</td></tr>
+<tr><td><strong>Architektura drewniana</strong> (XV–XVIII w.)</td><td>Kościoły Śląska Cieszyńskiego</td><td>Drewniane kościoły zrębowe. Szlak Architektury Drewnianej. Część na liście UNESCO.</td></tr>
+</table>
+
+<h3>Kto zbudował Nikiszowiec i Giszowiec?</h3>
+<table>
+<tr><th>Kto</th><th>Kim był</th><th>Co zrobił</th></tr>
+<tr><td><strong>Georg Zillmann</strong></td><td>Niemiecki architekt (1858–1930)</td><td>Główny projektant Giszowca (1906–1910) i Nikiszowca (1908–1918). Specjalista od osiedli robotniczych.</td></tr>
+<tr><td><strong>Emil Zillmann</strong></td><td>Brat Georga, architekt</td><td>Współprojektant obu osiedli. Duet braci Zillmann = największy ślad architektoniczny w śląskim krajobrazie robotniczym.</td></tr>
+<tr><td><strong>Spółka Georg von Giesches Erben</strong></td><td>Wielki koncern górniczo-hutniczy. Właściciel kopalni Giesche (dziś Wieczorek).</td><td>Zleceniodawca i płatnik. Budowała osiedla, bo lojalny robotnik = mniej strajków = więcej zysku.</td></tr>
+<tr><td><strong>Georg von Giesche</strong></td><td>XVII-wieczny kupiec z Wrocławia</td><td>Dostał od Habsburgów monopol na wydobycie rudy cynku na Śląsku. Założył dynastię, która jako spółka przetrwała do XX w. i dała nazwę kopalni.</td></tr>
+</table>
+
+<h3>Giszowiec kontra Nikiszowiec – różnice</h3>
+<table>
+<tr><th></th><th>Giszowiec</th><th>Nikiszowiec</th></tr>
+<tr><td><strong>Lata budowy</strong></td><td>1906–1910</td><td>1908–1918</td></tr>
+<tr><td><strong>Styl</strong></td><td>Miasto-ogród – niskie domki z ogródkami, kręte uliczki, dużo zieleni. Przypomina wioskę.</td><td>Zamknięte kwartały z czerwonej cegły, monumentalne bramy, gęsta zabudowa. Przypomina miasto.</td></tr>
+<tr><td><strong>Inspiracja</strong></td><td>Angielski ruch garden city – idea Ebenezera Howarda: praca i zieleń razem</td><td>Pruska kamienica i architektura śródziemnomorska</td></tr>
+<tr><td><strong>Los w PRL</strong></td><td>Częściowo wyburzony w latach 70. – w miejsce domków stanęły bloki. Część ocalała.</td><td>Zachowany w całości. Dziś zabytek i modna dzielnica artystyczna.</td></tr>
+</table>
+
+<h3>Najważniejsze obiekty – kto, kiedy, co</h3>
+<table>
+<tr><th>Obiekt</th><th>Data</th><th>Projektant</th><th>Ważne fakty</th></tr>
+<tr><td>Nikiszowiec</td><td>1908–1918</td><td>Georg i Emil Zillmann</td><td>7 kwartałów, kopalnia Giesche, dziś zabytek UNESCO-kandydat i dzielnica artystyczna</td></tr>
+<tr><td>Spodek</td><td>1964–1971</td><td>Maciej Gintowt</td><td>Kształt latającego spodka, 11 000 miejsc, symbol Katowic</td></tr>
+<tr><td>Radiostacja Gliwice</td><td>1935</td><td>–</td><td>111 m, najwyższa drewniana wieża świata, scena prowokacji 1939</td></tr>
+<tr><td>Zamek w Pszczynie</td><td>przebudowa XIX w.</td><td>m.in. Hippolyte Destailleur</td><td>Księżna Daisy, Kaiser Wilhelm II, gabinet luster</td></tr>
+<tr><td>Pałac w Pławniowicach</td><td>XIX w.</td><td>–</td><td>Neogotyk, park angielski, ród von Reischach i Schaffgotsch</td></tr>
+<tr><td>Sztolnia Czarnego Pstrąga</td><td>XIX w.</td><td>–</td><td>UNESCO 2017, trasa łodziami, Tarnowskie Góry</td></tr>
+<tr><td>Gmach Sejmu Śląskiego</td><td>1929</td><td>Kazimierz Wygas</td><td>Siedziba autonomicznego Sejmu Śląskiego. Dziś Śląski Urząd Marszałkowski w Katowicach.</td></tr>
+</table>
+</section>
+
+<!-- S8 KULTURA NAUKA -->
+<section id="s8">
+<h2 class="sec-title">Kultura i nauka Śląska</h2>
+
+<h3>Śląscy nobliści</h3>
+<table>
+<tr><th>Osoba</th><th>Nobel</th><th>Skąd ze Śląska</th><th>Za co i ciekawostka</th></tr>
+<tr><td><strong>Fritz Haber</strong></td><td>Chemia 1918</td><td>Wrocław</td><td>Odkrył jak produkować nawozy z azotu w powietrzu – dzięki temu można wyżywić miliardy ludzi. Ale stworzył też broń chemiczną w I WŚ. Żona Clara popełniła samobójstwo protestując przeciw temu.</td></tr>
+<tr><td><strong>Paul Ehrlich</strong></td><td>Medycyna 1908</td><td>Strzelin (Śląsk)</td><td>Stworzył pierwszą chemioterapię i odkrył salwarsan – lek na kiłę. Zwany ojcem „magicznych kul" (celnych leków).</td></tr>
+<tr><td><strong>Gerhart Hauptmann</strong></td><td>Literatura 1912</td><td>Szczawno-Zdrój (Śląsk)</td><td>Napisał dramat „Tkacze" (1892) o buncie śląskich tkaczy. Jeden z ojców naturalizmu w literaturze.</td></tr>
+<tr><td><strong>Józef Bożek</strong></td><td>–</td><td>Stare Bielsko (Śląsk Cieszyński)</td><td>Zbudował jeden z pierwszych pojazdów parowych w Europie (1815). Pionier motoryzacji.</td></tr>
+</table>
+
+<h3>Muzyka śląska</h3>
+<table>
+<tr><th>Artysta / Zespół</th><th>Gatunek</th><th>Skąd</th><th>Najważniejsze fakty</th></tr>
+<tr><td><strong>Wojciech Kilar</strong></td><td>Muzyka klasyczna i filmowa</td><td>Katowice</td><td>Pisał muzykę do wielkich filmów: „Dracula" (Coppola), „Pianista" (Polański), „Ziemia obiecana" (Wajda). Jeden z najważniejszych polskich kompozytorów XX w.</td></tr>
+<tr><td><strong>SBB / Jan Skrzek</strong></td><td>Rock progresywny</td><td>Siemianowice Śl.</td><td>Szukaj, Burz, Buduj. Lata 70. Skrzek gra na wielu instrumentach. Legenda polskiego rocka.</td></tr>
+<tr><td><strong>Kat / Roman Kostrzewski</strong></td><td>Heavy metal</td><td>Katowice</td><td>Od 1979. Pionierzy polskiego metalu. Mroczny klimat, charakterystyczny wokal Kostrzewskiego.</td></tr>
+<tr><td><strong>Dżem</strong></td><td>Blues-rock</td><td>Tychy</td><td>Od 1973. Riedel – genialny, tragiczny wokalista. Film „Skazany na bluesa" (2005).</td></tr>
+<tr><td><strong>Paktofonika</strong></td><td>Hip-hop</td><td>Katowice i Mikołów</td><td>1998–2003. Magik, Fokus, Joka. Śmierć Magika 2000. Film „Jesteś Bogiem" (2012).</td></tr>
+</table>
+
+<h3>Filmy o Śląsku</h3>
+<table>
+<tr><th>Tytuł</th><th>Rok</th><th>Reżyser</th><th>O czym</th></tr>
+<tr><td>Sól ziemi czarnej</td><td>1969</td><td>Kazimierz Kutz</td><td>II Powstanie Śląskie 1920</td></tr>
+<tr><td>Perła w koronie</td><td>1971</td><td>Kazimierz Kutz</td><td>Strajk śląskich górników w latach 30.</td></tr>
+<tr><td>Paciorki jednego różańca</td><td>1979</td><td>Kazimierz Kutz</td><td>Stary górnik broni swojego familoka przed wyburzeniem</td></tr>
+<tr><td>Skazany na bluesa</td><td>2005</td><td>Jan Kidawa-Błoński</td><td>Życie Ryśka Riedla z Dżemu</td></tr>
+<tr><td>Jesteś Bogiem</td><td>2012</td><td>Leszek Dawid</td><td>Historia Paktofoniki i Magika</td></tr>
+<tr><td>Kukuczka</td><td>2016</td><td>Waldemar Krzystek</td><td>Życie śląskiego himalaisty Jerzego Kukuczki</td></tr>
+<tr><td><strong>Ołowiane dzieci</strong> (serial Netflix)</td><td>2026</td><td>Maciej Pieprzyca</td><td>Historia dr Jolanty Wadowskiej-Król (Joanna Kulig), która w latach 70. odkrywa masowe zatrucie ołowiem dzieci z Szopienic (Huta Szopienice). Walczy z komunistycznym aparatem. 6-odcinkowy serial Netflixa. Premiera: 11 II 2026. Grany w autentycznych lokalizacjach: Katowice, Zabrze, Bytom, Świętochłowice. Bohaterem jest też Jerzy Ziętek (Marian Dziędziel).</td></tr>
+</table>
+
+<h3>Literatura śląska</h3>
+<table>
+<tr><th>Autor</th><th>Język</th><th>Co tworzył</th></tr>
+<tr><td>Józef Lompa</td><td>Polski</td><td>Pionier polskiego pisarstwa na Śląsku w XIX w. Legendy, podania, podręczniki.</td></tr>
+<tr><td>Stanisław Ligoń</td><td>Śląski / Polski</td><td>Felietony, audycje radiowe. Pseudonim: Karlik z Kocyndra.</td></tr>
+<tr><td>Gerhart Hauptmann</td><td>Niemiecki</td><td>„Tkacze" – dramat o śląskich tkaczach. Nobel 1912.</td></tr>
+<tr><td>Marcin Melon</td><td>Śląski (godka)</td><td>Współczesny pisarz – kryminały z Hanysem Rokitą po śląsku. Też organizator Silesia Incognita!</td></tr>
+</table>
+
+<h3>Teatr Korez – śląski teatr prywatny w Katowicach</h3>
+<div class="ev aut">
+<h4>Teatr Korez – kimże jest i co gra?</h4>
+<p>Teatr Korez (pl. Sejmu Śląskiego 2, Katowice) to prywatny teatr, który stał się centrum śląskiej kultury teatralnej. Prowadzony przez aktora i reżysera <strong>Mirosława Neinerta</strong>. Teatr utrzymuje się sam – bez dotacji publicznych. W repertuarze: komedie, farsy, ale też wyjątkowe sztuki śląskie, które stały się kultowe. Nie dostaje pieniędzy od władz, więc musi zarabiać – i robi to grając przy pełnej widowni.</p>
+</div>
+
+<table>
+<tr><th>Spektakl</th><th>Premiera</th><th>Co to jest</th></tr>
+<tr><td><strong>Cholonek, czyli dobry Pan Bóg z gliny</strong></td><td>16 X 2004</td><td>Adaptacja kultowej powieści Janoscha (właśc. Horst Eckert, urodzony w Zabrzu). Reżyseria: Mirosław Neinert i Robert Talarczyk. Grany gwarą śląską. Akcja 1930–1950. Bohaterowie to Ślązacy żyjący „pomiędzy" – między Polską a Niemcami, między tragedią a komedią. Najważniejsza rola: Grażyna Bułka jako pani Świętkowa. Nagroda Złota Maska 2004 (spektakl roku). Sam Janosch zobaczył spektakl i wzruszony wyszedł na scenę. Porównywany do filmów Kutza. Grany przy pełnych widowniach od 20+ lat.</td></tr>
+<tr><td><strong>Mianujom mie Hanka</strong></td><td>21 X 2016</td><td>Monodram w języku śląskim. Jedna aktorka – <strong>Grażyna Bułka</strong> – przez 75 minut gra starą Ślązaczkę Hankę opowiadającą swoje życie. Tekst: Alojzy Lysko „Opowieść górnośląska" (Grand Prix Konkursu Dziennikarskiego im. K. Bochenek). Reżyseria: Mirosław Neinert. Obrazy: Grzegorz Chudy (malarz bebooków!). Historia Śląska od I WŚ do późnego PRL oczami zwykłej kobiety. Nagroda Złota Maska za rolę żeńską. W 2025 r. nadany przez Teatr Telewizji – pierwszy spektakl TVP po śląsku w historii. Był też grany w Parlamencie Europejskim!</td></tr>
+</table>
+
+<h3>Książki o Śląsku – literatura śląska (warta znajomości)</h3>
+<table>
+<tr><th>Tytuł</th><th>Autor</th><th>O czym</th></tr>
+<tr><td><strong>Cholonek, czyli dobry Pan Bóg z gliny</strong></td><td>Janosch (Horst Eckert, ur. Zabrze 1931)</td><td>Kultowa powieść o śląskiej rodzinie w latach 1930–1950. Groteska i tragizm w jednym. Janosch pisał po niemiecku – tłumaczenie na polski: Leon Bielski. Podstawa spektaklu Korezu.</td></tr>
+<tr><td><strong>Kajś. Opowieść o Górnym Śląsku</strong></td><td><strong>Zbigniew Rokita</strong></td><td>Reportaż-saga o odkrywaniu śląskich korzeni. Rokita – dziennikarz, „krojcok" (z rodziny mieszanej) – śledzi historię własnej rodziny i historię Górnego Śląska w jednym. Nagroda Nike 2021 (najważniejsza polska nagroda literacka). „Kajś" po śląsku = „kiedyś" lub „gdzieś". Jedna z najważniejszych książek o Śląsku XXI w.</td></tr>
+<tr><td><strong>Hanys Rokita – seria kryminałów po śląsku</strong></td><td>Marcin Melon</td><td>Kryminały pisane w całości po śląsku (godce). Detektyw Hanys Rokita rozwiązuje sprawy na Śląsku. Popularne, zabawne, a przy tym uczą godki. Marcin Melon to jeden z organizatorów Silesia Incognita!</td></tr>
+<tr><td><strong>Ołowiane dzieci</strong></td><td>Michał Jędryка</td><td>Reportaż o epidemii ołowicy dzieci z Szopienic w latach 70. i bohaterstwie dr Wadowskiej-Król. Podstawa serialu Netflixa (2026).</td></tr>
+<tr><td><strong>Jak Niobe. Opowieść górnośląska</strong></td><td>Alojzy Lysko</td><td>Tekst będący podstawą monodramu „Mianujom mie Hanka". Historia Ślązaczki przez całe XX stulecie. Grand Prix Konkursu Dziennikarskiego im. K. Bochenek.</td></tr>
+<tr><td><strong>Drach</strong></td><td>Szczepan Twardoch</td><td>Powieść z Pilchowic. Wielopokoleniowa historia śląskiej rodziny, wojny i tożsamości. Częściowo po śląsku. Jeden z najgłośniejszych polskich debiutów dekady.</td></tr>
+<tr><td><strong>Piąta strona świata</strong></td><td>Kazimierz Kutz</td><td>Wspomnienia reżysera o swoim śląskim dzieciństwie w Szopienicach i o Śląsku jako „piątej stronie świata" – odrębnej, niepowtarzalnej przestrzeni między Wschodem a Zachodem.</td></tr>
+</table>
+
+</section>
+
+<!-- S9 SPORT -->
+<section id="s9">
+<h2 class="sec-title">Sport na Śląsku</h2>
+
+<h3>Piłka nożna (fusbal)</h3>
+<table>
+<tr><th>Klub</th><th>Miasto</th><th>Przydomek</th><th>Sukcesy i ciekawostki</th></tr>
+<tr><td><strong>Ruch Chorzów</strong></td><td>Chorzów</td><td>Niebieska Gwiazda</td><td>14 mistrzostw Polski – rekord. Lata świetności: 1930–1975. Gerard Cieślik, Ernest Wilimowski.</td></tr>
+<tr><td><strong>Górnik Zabrze</strong></td><td>Zabrze</td><td>Górnicy</td><td>14 mistrzostw Polski. W 1969 roku dotarli do finału Pucharu Zdobywców Pucharów (przegrali z Manchesterem City).</td></tr>
+<tr><td><strong>GKS Katowice</strong></td><td>Katowice</td><td>GieKSa</td><td>Założony 27 II 1964. Nigdy nie zdobył mistrzostwa Polski w piłce nożnej. Za to: 4x wicemistrz Polski (1988, 1989, 1992, 1994), 3x Puchar Polski (1986, 1991, 1993). Europejskie puchary: w sezonie 1994/95 wyeliminował Girondins Bordeaux (ze składu Zidane!) w Pucharze UEFA. W 2024 r. awansował do Ekstraklasy.</td></tr>
+<tr><td><strong>Piast Gliwice</strong></td><td>Gliwice</td><td>–</td><td>Mistrzostwo Polski 2019 – wielka niespodzianka.</td></tr>
+</table>
+
+<h3>Hokej na lodzie</h3>
+<table>
+<tr><th>Klub</th><th>Sukcesy</th></tr>
+<tr><td><strong>GKS Tychy</strong></td><td>Wielokrotny mistrz Polski w hokeju. Finały Silesia Incognita odbywają się w Tyskiej Galerii Sportu – przy stadionie GKS!</td></tr>
+<tr><td><strong>GKS Katowice</strong></td><td><strong>8x mistrz Polski</strong> (1958, 1960, 1962, 1965, 1968, 1970, 2022, 2023). Jeden z najstarszych i najlepszych klubów hokejowych w Polsce. Po długiej przerwie (bankructwo 2004) wrócił do Polskiej Hokej Ligi i w 2022 r. sięgnął po złoto po 52 latach czekania! W sezonie 2022/23 grał w prestiżowej Hokejowej Lidze Mistrzów.</td></tr>
+<tr><td><strong>Naprzód Janów (Katowice)</strong></td><td>Jeden z najstarszych klubów hokejowych w Polsce. Tradycja sięga lat 30. XX w.</td></tr>
+</table>
+
+<h3>Himalaizm śląski</h3>
+<table>
+<tr><th>Alpinista</th><th>Skąd</th><th>Osiągnięcia</th></tr>
+<tr><td><strong>Jerzy Kukuczka</strong></td><td>Katowice (1948–1989)</td><td>2. człowiek na świecie ze wszystkimi 14 ośmiotysięcznikami. Aż 8 z nich zdobył zimą – rekord świata. Zginął na Lhotse 1989. Film dokumentalny „Kukuczka" (2016).</td></tr>
+<tr><td><strong>Adam Bielecki</strong></td><td>Gliwice (ur. 1983)</td><td>Pierwszy zimowy zdobywca Gasherbrum I (2012). Akcja ratunkowa na K2 (2018) – uratował Elisabeth Revol.</td></tr>
+</table>
+</section>
+
+<!-- S10 MITY -->
+<section id="s10">
+<h2 class="sec-title">Śląskie mity i legendy</h2>
+
+<h3>Śląskie stwory i duchy</h3>
+<table>
+<tr><th>Stwór</th><th>Gdzie żyje</th><th>Co robi</th></tr>
+<tr><td><strong>Utopiec (Utopek)</strong></td><td>Stawy, rzeki, studnie</td><td>Zły duch wody. Topił ludzi, porywał niemowlęta. Straszono nim dzieci, żeby nie chodziły nad wodę.</td></tr>
+<tr><td><strong>Polednica (Południca)</strong></td><td>Pola w upalne południe</td><td>Biała postać kobieca atakująca żeńców w południe. Zagadywała pytaniami – kto się pomylił lub nie odpowiedział, chorował lub umierał.</td></tr>
+<tr><td><strong>Bebok / Bobok</strong></td><td>Ciemne miejsca, domy</td><td>Śląskie straszydło, „buka". Straszy niegrzeczne dzieci. Czarna, nieokreślona postać. Grzegorz Chudy maluje bebooki.</td></tr>
+<tr><td><strong>Skarbnik</strong></td><td>Kopalnie</td><td>Duch kopalni – opiekun górników. Wygląda jak stary górnik z lampą. Ostrzega przed wypadkami. Kto go nie szanuje – ginie pod ziemią.</td></tr>
+<tr><td><strong>Biała Dama</strong></td><td>Zamki i pałace</td><td>Zjawa w białej sukni. Pojawia się w zamkach (m.in. Moszna) przed śmiercią lub nieszczęściem w rodzinie właścicieli.</td></tr>
+<tr><td><strong>Latawiec</strong></td><td>Nocne niebo</td><td>Ognisty duch lecący nocą – wygląda jak ognisty wąż lub kula. Przynosi bogactwo albo powoduje pożar. Kojarzony z diabłem.</td></tr>
+</table>
+</section>
+
+<!-- S11 JEZYK -->
+<section id="s11">
+<h2 class="sec-title">Język śląski – godka</h2>
+
+<h3>Słownik godki – 50 słów</h3>
+<table>
+<tr><th>Po śląsku</th><th>Po polsku</th><th>Skąd pochodzi</th></tr>
+<tr><td><strong>godać</strong></td><td>mówić</td><td>Godka = mowa śląska</td></tr>
+<tr><td><strong>gryfny / gryfno</strong></td><td>ładny / ładna</td><td>Z niem. griffig</td></tr>
+<tr><td><strong>fusbal</strong></td><td>piłka nożna</td><td>Z niem. Fußball</td></tr>
+<tr><td><strong>hajer</strong></td><td>górnik</td><td>Z niem. Hauer (rębacz)</td></tr>
+<tr><td><strong>gruba</strong></td><td>kopalnia</td><td>Słowo śląskie</td></tr>
+<tr><td><strong>szychta</strong></td><td>zmiana w pracy</td><td>Z niem. Schicht – wszedł do polskiego slangu</td></tr>
+<tr><td><strong>bana</strong></td><td>tramwaj / pociąg</td><td>Z niem. Bahn (kolej)</td></tr>
+<tr><td><strong>hasiok</strong></td><td>śmietnik</td><td>Z niem. Häuschen – jedno z najbardziej znanych słów śląskich</td></tr>
+<tr><td><strong>gulik</strong></td><td>kratka ściekowa w ulicy</td><td>Z niem. Gully</td></tr>
+<tr><td><strong>modro kapusta</strong></td><td>czerwona kapusta</td><td>Modry = niebieski/fioletowy po śląsku i czesku</td></tr>
+<tr><td><strong>gumiklyjzy</strong></td><td>kalosze</td><td>Z niem. Gummi (guma) + klejzy (buty)</td></tr>
+<tr><td><strong>szneka</strong></td><td>drożdżówka</td><td>Z niem. Schnecke (ślimak – od spiralnego kształtu)</td></tr>
+<tr><td><strong>gymba</strong></td><td>twarz, gęba</td><td>Z niem. Gimpe</td></tr>
+<tr><td><strong>bajtel</strong></td><td>dziecko</td><td>Z niem. Beitel</td></tr>
+<tr><td><strong>kocynder</strong></td><td>żartowniś</td><td>Pseudonim Ligonia: „Karlik z Kocyndra"</td></tr>
+<tr><td><strong>hanys</strong></td><td>Ślązak (potocznie)</td><td>Od imienia Hans/Jan</td></tr>
+<tr><td><strong>cug</strong></td><td>pociąg</td><td>Z niem. Zug</td></tr>
+<tr><td><strong>wachtyrz</strong></td><td>stróż</td><td>Z niem. Wächter – portal Wachtyrz.eu</td></tr>
+<tr><td><strong>przeca / dziepro</strong></td><td>przecież</td><td>Typowo śląskie</td></tr>
+<tr><td><strong>bifyj</strong></td><td>kredens</td><td>Z franc./niem. Buffet</td></tr>
+<tr><td><strong>galoty</strong></td><td>spodnie</td><td>Z niem.</td></tr>
+<tr><td><strong>hamerok</strong></td><td>głupiec</td><td>Własne słowo śląskie</td></tr>
+<tr><td><strong>modry</strong></td><td>niebieski / fioletowy</td><td>Z czeskiego – stąd „modro kapusta"</td></tr>
+<tr><td><strong>luft</strong></td><td>powietrze</td><td>Z niem. Luft – „dać luftu" = przewietrzyć</td></tr>
+<tr><td><strong>sztela</strong></td><td>miejsce</td><td>Z niem. Stelle</td></tr>
+<tr><td><strong>ancug</strong></td><td>garnitur</td><td>Z niem. Anzug</td></tr>
+<tr><td><strong>bryja</strong></td><td>kleik, bałagan</td><td>Słowiańskie</td></tr>
+<tr><td><strong>hałda</strong></td><td>hałda (zwałowisko)</td><td>Z niem. Halde – element śląskiego krajobrazu</td></tr>
+<tr><td><strong>familok</strong></td><td>dom robotniczy</td><td>Z niem. Familie</td></tr>
+<tr><td><strong>knajpa</strong></td><td>bar, gospoda</td><td>Z niem. Kneipe – weszło też do polszczyzny</td></tr>
+<tr><td><strong>frelka</strong></td><td>panna, dziewczyna</td><td>Z niem. Fräulein</td></tr>
+<tr><td><strong>karl / karlik</strong></td><td>chłopak / karzeł</td><td>Z niem. Karl – stąd pseudonim Ligonia</td></tr>
+<tr><td><strong>fest</strong></td><td>bardzo, mocno</td><td>Z niem. fest – „fest fajny" = bardzo fajny</td></tr>
+<tr><td><strong>deka</strong></td><td>kołdra</td><td>Z niem. Decke</td></tr>
+<tr><td><strong>hercklekot</strong></td><td>kołatanie serca, strach</td><td>Z niem. Herzklopfen</td></tr>
+<tr><td><strong>kichać</strong></td><td>kaszleć</td><td>Z niem. keuchen – uwaga: NIE oznacza kuchni!</td></tr>
+<tr><td><strong>klyjza / klejza</strong></td><td>but (duży, stary)</td><td>Z niem. – część słowa „gumiklyjzy"</td></tr>
+<tr><td><strong>pyrlik</strong></td><td>młotek górniczy</td><td>Narzędzie górnicze. Pyrlik i żelaźniak = herb górniczy.</td></tr>
+<tr><td><strong>żelaźniak</strong></td><td>kilof górniczy</td><td>Razem z pyrlikiem tworzy herb górniczy – symbol Śląska</td></tr>
+<tr><td><strong>pieron</strong></td><td>piorun (łagodne przekleństwo)</td><td>„Pieronie!" – okrzyk zaskoczenia lub irytacji</td></tr>
+<tr><td><strong>chop / baba</strong></td><td>mąż / żona (kobieta)</td><td>Staropolskie – neutralne w godce</td></tr>
+<tr><td><strong>starzik / starka</strong></td><td>dziadek / babcia</td><td>Typowo śląskie – zamiast „dziadek" i „babcia"</td></tr>
+<tr><td><strong>Ślōnzok / Ślōnzaczka</strong></td><td>Ślązak / Ślązaczka</td><td>ō = charakterystyczna śląska litera</td></tr>
+<tr><td><strong>wele</strong></td><td>obok, przy</td><td>Staropolski archaizm – „wele mie" = obok mnie</td></tr>
+<tr><td><strong>po jakiymu?</strong></td><td>dlaczego? po co?</td><td>Typowo śląskie pytanie</td></tr>
+<tr><td><strong>gnysi pympek</strong></td><td>stokrotka (kwiatek)</td><td>Dosłownie: „brzydka pompka". Śląska nazwa stokrotki – jeden z najbardziej zaskakujących i zabawnych śląskich zwrotów. Przykład jak poetycko Ślązacy nazywali pospolite rzeczy.</td></tr>
+<tr><td><strong>borsztajn</strong></td><td>krawężnik</td><td>Z niem. Bordstein. Śląska nazwa krawężnika – kamiennej listwy oddzielającej chodnik od jezdni. Bardzo popularne w codziennej godce.</td></tr>
+<tr><td><strong>szmaterlok</strong></td><td>motyl</td><td>Z niem. Schmetterling – jedno z najbardziej znanych i lubianych słów śląskich. Przykład jak niemczyzna wrosła w godkę.</td></tr>
+<tr><td><strong>klopfsztanga</strong></td><td>trzepak (do dywanów)</td><td>Z niem. klopfen (uderzać) + Stange (drąg). Trzepak na podwórku familoka. Symbol śląskiego podwórka i dzieciństwa.</td></tr>
+<tr><td><strong>krojcok</strong></td><td>osoba z mieszanej rodziny (śląsko-polskiej lub śląsko-niemieckiej)</td><td>Od niem. Kreuz (krzyż) – „skrzyżowany". Krojcok to ktoś, kto ma przodków różnych narodowości. Zbigniew Rokita (autor „Kajś") sam siebie tak nazywa.</td></tr>
+<tr><td><strong>na bezrok</strong></td><td>na zawsze</td><td>Archaiczne wyrażenie śląskie</td></tr>
+<tr><td><strong>ôjciec / ôjc</strong></td><td>ojciec</td><td>Archaiczna staropolska forma zachowana w godce</td></tr>
+<tr><td><strong>genau</strong></td><td>dokładnie, właśnie tak</td><td>Wprost z niem. genau. Używane jako potwierdzenie – „genau!" = „właśnie!", „zgadza się!". Jeden z najczęstszych germanizmów w śląskiej mowie.</td></tr>
+<tr><td><strong>żymła</strong></td><td>bułka pszenna</td><td>Z niem. Semmel. „Iść po żymły" = iść po bułki do piekarni.</td></tr>
+<tr><td><strong>tomata</strong></td><td>pomidor</td><td>Z niem./wł. Tomate. Po śląsku pomidor to tomata.</td></tr>
+<tr><td><strong>krepel</strong></td><td>pączek</td><td>Z niem. Krapfen. Śląski pączek to krepel. Bardzo znane słowo, symbol śląskiego słownictwa.</td></tr>
+<tr><td><strong>wuszt</strong></td><td>kiełbasa, wędlina</td><td>Z niem. Wurst. Po śląsku kiełbasa to wuszt.</td></tr>
+<tr><td><strong>krupniok</strong></td><td>kaszanka śląska</td><td>Śląska kaszanka z krupami (kaszą) i krwią. Grubszy i bardziej kaszysty niż zwykła kaszanka. Symbol śląskiej kuchni.</td></tr>
+<tr><td><strong>sznita</strong></td><td>kromka chleba</td><td>Z niem. Schnitte (plasterek). „Sznita chleba" = kromka chleba.</td></tr>
+<tr><td><strong>antryj</strong></td><td>przedpokój, sień, korytarz</td><td>Z niem. Entrée. Wejście do mieszkania, przedsionek. „Zostaw to w antryi" = zostaw to w przedpokoju.</td></tr>
+<tr><td><strong>łoblekać</strong></td><td>ubierać (kogoś)</td><td>Śląski czasownik. „Łoblecz bajtla" = ubierz dziecko. Antonim: seblekać.</td></tr>
+<tr><td><strong>seblekać</strong></td><td>rozbierać (kogoś)</td><td>Śląski czasownik. „Seblecz bajtla" = rozbierz dziecko. Para z łoblekać.</td></tr>
+<tr><td><strong>zoki</strong></td><td>skarpety</td><td>Z niem. Socken. „Zoki na nogi" = skarpety na nogi. Bardzo popularne.</td></tr>
+<tr><td><strong>mantel</strong></td><td>płaszcz</td><td>Z niem. Mantel. Śląski płaszcz to mantel.</td></tr>
+<tr><td><strong>szczewiki</strong></td><td>buty, trzewiki</td><td>Z niem. Schuhe (buty). Śląskie buty to szczewiki. „Nowe szczewiki" = nowe buty.</td></tr>
+<tr><td><strong>kichol</strong></td><td>nos</td><td>Śląskie słowo na nos. „Wytrzyj kichol" = wytrzyj nos. Jedno z zabawniejszych śląskich słów.</td></tr>
+<tr><td><strong>bryle</strong></td><td>okulary</td><td>Z niem. Brille. Śląskie okulary to bryle. „Zgubiłech bryle" = zgubiłem okulary.</td></tr>
+<tr><td><strong>koło</strong></td><td>rower</td><td>Śląskie słowo na rower – nie „rower", tylko „koło". „Jedna na kole" = jedzie na rowerze. Jedno z najbardziej rozpoznawalnych regionalizmów śląskich.</td></tr>
+<tr><td><strong>gelender</strong></td><td>balustrada, poręcz</td><td>Z niem. Geländer. Poręcz przy schodach lub balkon. „Trzymej sie gelendra" = trzymaj się poręczy.</td></tr>
+<tr><td><strong>maszkety</strong></td><td>słodycze, łakocie</td><td>Z niem. Nascherei (łakocie). „Kupić bajtlowi maszket" = kupić dziecku słodycze. Bardzo popularne i lubiane słowo śląskie.</td></tr>
+<tr><td><strong>bombony</strong></td><td>cukierki</td><td>Z niem. Bonbon. „Dej mi bombona" = daj mi cukierka. Maszkety to słodycze ogólnie, bombony to konkretnie cukierki.</td></tr>
+<tr><td><strong>kelnia</strong></td><td>chochla, łyżka wazowa</td><td>Z niem. Kelle (chochla). Duża łyżka do nakładania zupy. „Dej mi kelniom" = daj mi chochlą.</td></tr>
+<tr><td><strong>krauza</strong></td><td>słoik</td><td>Z niem. Krause. Szklany słoik do przetworów. „Krauza dżemu" = słoik dżemu. Bardzo popularne słowo w śląskiej kuchni domowej.</td></tr>
+<tr><td><strong>nudelkula</strong></td><td>wałek do ciasta</td><td>Z niem. Nudel (makaron) + Kula (kula). Wałek kuchenny do wałkowania ciasta. Klasyczne słowo śląskiej kuchni.</td></tr>
+<tr><td><strong>radiska</strong></td><td>rzodkiewka</td><td>Z niem. Radieschen. Śląska rzodkiewka to radiska. „Radiska do żymły" = rzodkiewka do bułki.</td></tr>
+<tr><td><strong>szrank</strong></td><td>szafa</td><td>Z niem. Schrank. Śląska szafa to szrank. „Zawieś do szranku" = powieś do szafy.</td></tr>
+<tr><td><strong>tasza</strong></td><td>torba, torebka</td><td>Z niem. Tasche. Torba na zakupy lub torebka damska. „Weź taszę" = weź torbę.</td></tr>
+<tr><td><strong>szlojder</strong></td><td>proca</td><td>Z niem. Schleuder (proca, katapulta). Śląska proca – zabawka chłopców strzelających kamieniami. Klasyczne słowo śląskiego dzieciństwa.</td></tr>
+</table>
+
+<h3>Skąd pochodzi godka?</h3>
+<table>
+<tr><th>Język / wpływ</th><th>Co wniósł</th></tr>
+<tr><td><strong>Staropolski (podstawa)</strong></td><td>Rdzeń godki. Wiele starych polskich słów, które w normalnej polszczyźnie zniknęły, przetrwało na Śląsku.</td></tr>
+<tr><td><strong>Czeski i morawski</strong></td><td>Przez blisko 200 lat (XIV–XVI w.) Śląsk był pod Czechami. Stąd m.in. słowo „modry" (niebieski).</td></tr>
+<tr><td><strong>Niemiecki (bardzo dużo!)</strong></td><td>Od XIII w. niemieccy osadnicy. Od 1742 pruskie szkoły po niemiecku. Setki słów: fusbal, hajer, bana, szneka, gymba, gryfny. Ślązacy często nie wiedzą, że to po niemiecku!</td></tr>
+<tr><td><strong>Łacina</strong></td><td>Przez kościół katolicki – terminy religijne i administracyjne.</td></tr>
+<tr><td><strong>Słowacki / morawski</strong></td><td>Przez kontakty handlowe i migracje – głównie w okolicach Śląska Cieszyńskiego.</td></tr>
+</table>
+
+<h3>Gwara czy język? – dlaczego to ważne pytanie</h3>
+<div class="ev ple">
+<h4>Powody, żeby uznać śląski za język</h4>
+<p>– Wiele śląskich słów i zdań jest niezrozumiałych dla Polaków spoza regionu<br>
+– Jest literatura pisana po śląsku (Marcin Melon – kryminały z Hanysem Rokitą), prasa (Wachtyrz.eu), słowniki i nawet tłumaczenia Biblii<br>
+– W 2021 r. ok. <strong>500 000</strong> osób zadeklarowało śląski jako swój język domowy<br>
+– Kaszubski, który ma mniej użytkowników, jest już oficjalnie językiem regionalnym w Polsce (od 2005)<br>
+– W 2024 r. Sejm i Senat przegłosowały ustawę uznającą śląski za język regionalny</p>
+</div>
+<div class="ev pow">
+<h4>Powody, żeby nie uznawać za język</h4>
+<p>– Brak jednej uzgodnionej pisowni – różne grupy piszą inaczej<br>
+– Część językoznawców uważa śląski za dialekt polskiego (jak gwara podhalańska)<br>
+– Prezydent Andrzej Duda w 2024 r. zawetował ustawę – uznanie zostało zablokowane<br>
+– Niektórzy politycy boją się, że uznanie śląskiego języka to wstęp do oderwania Śląska od Polski</p>
+</div>
+
+<h3>Co dalej z językiem śląskim?</h3>
+<table>
+<tr><th>Czynnik</th><th>Co to oznacza</th></tr>
+<tr><td>Zmiana prezydenta (2025)</td><td>Nowy prezydent <strong>Karol Nawrocki</strong> (zaprzysiężony 6 VIII 2025) również zawetował ustawę – w lutym 2026 r. Już w kampanii wyborczej zapowiedział, że jej nie podpisze. Do 2030 r. język śląski nie ma szans na oficjalne uznanie.</td></tr>
+<tr><td>Rosnąca duma śląska</td><td>Młodzi Ślązacy coraz bardziej świadomie używają godki. Ruch oddolny jest silny.</td></tr>
+<tr><td>Brak jednej pisowni</td><td>Przed wejściem do szkół trzeba najpierw ustalić wspólne zasady pisania.</td></tr>
+<tr><td>Przykład kaszubski</td><td>Kaszubski jest w szkołach od 2005 – model, który Śląsk mógłby naśladować.</td></tr>
+</table>
+<div class="ev aut"><h4>Znane powiedzenie</h4><p><em>„Język to dialekt z armią i flotą"</em> – powiedzenie językoznawcy Maxa Weinreicha. Znaczy: różnica między językiem a dialektem jest często polityczna, nie językowa. Śląski czeka na swoją szansę polityczną.</p></div>
+</section>
+
+<!-- S12 GEOGRAFIA -->
+<section id="s12">
+<h2 class="sec-title">Geografia Górnego Śląska</h2>
+<div class="alert ad">Organizatorzy mówią wprost: błędy geograficzne są bardzo częste. Zapamiętaj co jest, a co NIE jest Śląskiem!</div>
+
+<h3>Co należy do Górnego Śląska?</h3>
+<div class="ev ind">
+<p>Historyczny Górny Śląsk to: Katowice i cała aglomeracja (GOP), Chorzów, Zabrze, Gliwice, Bytom, Ruda Śląska, Świętochłowice, Rybnik, Tychy, Pszczyna, Mikołów, Tarnowskie Góry, <strong>Śląsk Opolski</strong> (Opole i okolice – historycznie część Górnego Śląska!), Śląsk Cieszyński (Cieszyn i okolice), Zaolzie (za rzeką Olzą – dziś w Czechach).</p>
+</div>
+
+<h3>Co NIE jest Górnym Śląskiem – typowe błędy!</h3>
+<table>
+<tr><th>Miejsce</th><th>Prawdziwa przynależność</th><th>Dlaczego to błąd?</th></tr>
+<tr><td>Sosnowiec, Dąbrowa Górnicza, Będzin</td><td>Zagłębie Dąbrowskie (historycznie Małopolska)</td><td>Są dziś w województwie śląskim, ale nigdy nie były Śląskiem! Granica śląsko-zagłębiowska biegnie przez środek aglomeracji.</td></tr>
+<tr><td>Żywiec i Beskidy Żywieckie</td><td>Galicja / Małopolska</td><td>Są w woj. śląskim, ale historycznie to Galicja, nie Śląsk.</td></tr>
+<tr><td>Częstochowa</td><td>Małopolska / Kongresówka</td><td>Są w woj. śląskim, ale historycznie Małopolska.</td></tr>
+<tr><td>Wrocław</td><td>Dolny Śląsk</td><td>Wrocław to Śląsk, ale DOLNY – nie Górny. „Jadę z Wrocławia na Śląsk" = błąd!</td></tr>
+<tr><td>Bielsko-Biała</td><td>Bielsko = Śląsk Cieszyński, Biała = Galicja</td><td>Skomplikowane: połączono dwa różne historyczne miasta w 1951 r.</td></tr>
+</table>
+
+<h3>Granica śląsko-zagłębiowska</h3>
+<div class="ev ple">
+<p>Historyczna granica biegnie przez środek dzisiejszego województwa śląskiego:<br>
+<strong>ŚLĄSK:</strong> Katowice, Chorzów, Bytom, Zabrze, Gliwice, Ruda Śląska<br>
+<strong>ZAGŁĘBIE:</strong> Sosnowiec, Dąbrowa Górnicza, Będzin, Czeladź<br><br>
+Rywalizacja Śląsk–Zagłębie jest słynna – mecz Ruch Chorzów vs Zagłębie Sosnowiec to kulturowe derby regionu!</p>
+</div>
+
+<h3>Zaolzie</h3>
+<div class="ev aut">
+<p>Część Śląska Cieszyńskiego za rzeką Olzą. Po I WŚ sporne między Polską a Czechosłowacją. W 1920 r. przyznane Czechosłowacji. Dziś w Czechach. Mieszka tam polska mniejszość. Organizatorzy Silesia Incognita zapraszają drużyny z Zaolzia!</p>
+</div>
+
+<h3>Ważne rzeki</h3>
+<table>
+<tr><th>Rzeka</th><th>Znaczenie dla Śląska</th></tr>
+<tr><td>Odra</td><td>Główna rzeka Śląska. Płynie przez Opole i dalej przez Wrocław (Dolny Śląsk).</td></tr>
+<tr><td>Wisła</td><td>Zaczyna się w Beskidach Śląskich (góra Barania). Płynie przez Śląsk Cieszyński.</td></tr>
+<tr><td>Olza</td><td>Granica między Polską a Czechami na Śląsku Cieszyńskim. Stąd nazwa „Zaolzie".</td></tr>
+<tr><td>Brynica</td><td>Historyczna granica między Śląskiem a Zagłębiem Dąbrowskim.</td></tr>
+<tr><td>Kłodnica</td><td>Płynie przez Katowice i Gliwice. Kanał Gliwicki łączy ją z Odrą.</td></tr>
+</table>
+
+<h3>Ważne miasta – nazwy polskie i niemieckie</h3>
+<table>
+<tr><th>Polska</th><th>Niemiecka</th><th>Ciekawostka</th></tr>
+<tr><td>Katowice</td><td>Kattowitz</td><td>Prawa miejskie 1865. Stolica autonomii śląskiej od 1922.</td></tr>
+<tr><td>Chorzów</td><td>Königshütte (Królewska Huta)</td><td>Nazwa Chorzów przywrócona po 1922. Tu Ruch Chorzów.</td></tr>
+<tr><td>Zabrze</td><td>Hindenburg O.S.</td><td>Przemianowane na cześć gen. Hindenburga w 1915. Kopalnia Guido.</td></tr>
+<tr><td>Gliwice</td><td>Gleiwitz</td><td>Radiostacja – scena prowokacji 1939. Baildon i wielki piec.</td></tr>
+<tr><td>Bytom</td><td>Beuthen O.S.</td><td>Jedno z najstarszych miast Śląska. Kraftwerk Oberschlesien.</td></tr>
+<tr><td>Tychy</td><td>Tichau</td><td>Browar od 1629. W PRL rozbudowane jako nowe miasto.</td></tr>
+<tr><td>Pszczyna</td><td>Pless</td><td>Zamek Księżnej Daisy. Kaiser Wilhelm II.</td></tr>
+<tr><td>Tarnowskie Góry</td><td>Tarnowitz</td><td>Najstarsze górnicze miasto Śląska. Sztolnia UNESCO.</td></tr>
+<tr><td>Opole</td><td>Oppeln</td><td>Historyczna stolica Górnego Śląska. Po 1922 – stolica niem. części.</td></tr>
+<tr><td>Mysłowice</td><td>Myslowitz</td><td>Masakra górników (1919) = przyczyna I powstania śląskiego.</td></tr>
+<tr><td>Cieszyn</td><td>Teschen</td><td>Podzielone w 1920 – Cieszyn (Polska) i Czeski Cieszyn (Czechy).</td></tr>
+<tr><td>Siemianowice Śl.</td><td>Siemianowitz</td><td>Miasto rodzinne Korfantego (Sadzawka) i Jana Skrzeka.</td></tr>
+<tr><td>Świętochłowice</td><td>Schwientochlowitz</td><td>Obóz pracy Zgoda (1945–1946).</td></tr>
+<tr><td>Jastrzębie-Zdrój</td><td>Königsdorff-Jastrzemb</td><td>XIX-w. uzdrowisko. Porozumienia Jastrzębskie 1980.</td></tr>
+<tr><td>Nikiszowiec</td><td>Nikischau / Giesche-Colonie</td><td>Osiedle patronackie, projekt Zillmannów.</td></tr>
+</table>
+</section>
+
+<!-- S13 PRZYNALEZNOSC -->
+<section id="s13">
+<h2 class="sec-title">Przynależność państwowa Górnego Śląska – od XI wieku</h2>
+<table>
+<tr><th>Wiek</th><th>Pod czyją władzą</th><th>Najważniejszy fakt</th></tr>
+<tr><td><strong>X–XI w.</strong></td><td>Polska Piastowska</td><td>Bolesław Chrobry włącza Śląsk do Polski ok. 990 r. Gród w Opolu – centrum regionu.</td></tr>
+<tr><td><strong>XII w.</strong></td><td>Polska Piastowska (rozbicie dzielnicowe)</td><td>1138 – testament Krzywoustego. Śląsk staje się oddzielną dzielnicą rządzoną przez śląskich Piastów.</td></tr>
+<tr><td><strong>XIII w.</strong></td><td>Piastowie śląscy</td><td>Jadwiga Śląska (†1243), Henryk Pobożny (bitwa z Mongołami pod Legnicą 1241). Coraz bliżej Czech.</td></tr>
+<tr><td><strong>XIV w.</strong></td><td>Królestwo Czech (Korona Czeska)</td><td>1335 – Kazimierz Wielki zrzeka się praw do Śląska w traktacie z Czechami. Śląsk formalnie czeski.</td></tr>
+<tr><td><strong>XV w.</strong></td><td>Korona Czeska</td><td>Wojny husyckie docierają na Śląsk. Kolejni Piastowie śląscy wygasają jako lennicy Czech.</td></tr>
+<tr><td><strong>XVI w.</strong></td><td>Habsburgowie (przez Czechy)</td><td>1526 – Habsburgowie przejmują Koronę Czeską (i Śląsk). Reformacja dociera na Śląsk.</td></tr>
+<tr><td><strong>XVII w.</strong></td><td>Habsburgowie</td><td>Wojna trzydziestoletnia (1618–1648) – Śląsk polem walki. Rekatolizacja. Ostatni Piastowie śląscy wygasają (1675).</td></tr>
+<tr><td><strong>1. poł. XVIII w.</strong></td><td>Habsburgowie → Prusy</td><td>1740–1763 – trzy wojny śląskie. Fryderyk Wielki (Prusy) odbiera Śląsk Marii Teresie (Austria).</td></tr>
+<tr><td><strong>2. poł. XVIII w.</strong></td><td>Królestwo Prus</td><td>Pruska modernizacja: von Reden, pierwsza maszyna parowa (1788).</td></tr>
+<tr><td><strong>XIX w.</strong></td><td>Prusy → Cesarstwo Niemieckie (od 1871)</td><td>Industrializacja, Baildon, Godula. Od 1871 – część zjednoczonych Niemiec. Kulturkampf, germanizacja.</td></tr>
+<tr><td><strong>1918–1922</strong></td><td>Niemcy / zarząd aliantów</td><td>Klęska Niemiec w I WŚ. Trzy powstania śląskie. Plebiscyt 1921. Podział Górnego Śląska.</td></tr>
+<tr><td><strong>1922–1939</strong></td><td>Polska (część) + Niemcy (część)</td><td>Polska część: woj. śląskie z autonomią. Niemiecka część: Prowincja Górny Śląsk (stolica Opole).</td></tr>
+<tr><td><strong>1939–1945</strong></td><td>III Rzesza Niemiecka</td><td>Cały Śląsk wcielony do Niemiec. Prowokacja gliwicka, volkslisty, obozy.</td></tr>
+<tr><td><strong>1945–1989</strong></td><td>Polska Rzeczpospolita Ludowa (PRL)</td><td>Powrót do Polski. Wysiedlenie Niemców. Napływ Polaków z Kresów. Likwidacja autonomii. Tłumienie tożsamości śląskiej.</td></tr>
+<tr><td><strong>od 1989</strong></td><td>Rzeczpospolita Polska</td><td>Odrodzenie tożsamości śląskiej. Debata o autonomii. 2024 – godka uznana za język regionalny (ale weto prezydenta).</td></tr>
+</table>
+
+<h3>Śląscy Piastowie – ważne postaci</h3>
+<table>
+<tr><th>Postać</th><th>Lata</th><th>Znaczenie</th></tr>
+<tr><td>Henryk I Brodaty</td><td>1165–1238</td><td>Mąż Jadwigi Śląskiej. Zjednoczył większość Śląska. Za jego rządów przyszli niemieccy osadnicy.</td></tr>
+<tr><td>Jadwiga Śląska</td><td>ok. 1174–1243</td><td>Żona Brodatego. Patronka Śląska. Klasztor w Trzebnicy. Święta od 1267.</td></tr>
+<tr><td>Henryk II Pobożny</td><td>1196–1241</td><td>Syn Brodatego. Zginął walcząc z Mongołami pod Legnicą (9 IV 1241).</td></tr>
+<tr><td>Jerzy Wilhelm legnicki</td><td>†1675</td><td>Ostatni Piast śląski. Po jego śmierci Śląsk w pełni pod Habsburgami.</td></tr>
+</table>
+</section>
+
+<!-- S14 SPOLECZENSTWO -->
+<section id="s14">
+<h2 class="sec-title">Społeczeństwo Górnego Śląska i spór o Śląsk po I wojnie</h2>
+
+<h3>Dlaczego Śląsk był sporny po I wojnie?</h3>
+<div class="ev ple">
+<p><strong>1. Mieszana tożsamość:</strong> Większość Ślązaków mówiła gwarą śląską – językiem pomiędzy polskim a niemieckim. Wiele osób utożsamiało się przede wszystkim ze Śląskiem, nie z Polską ani Niemcami. Pytanie „jesteś Polakiem czy Niemcem?" było dla nich niezrozumiałe.<br><br>
+<strong>2. Wieki pod Prusami:</strong> Od 1742 r. całe pokolenia chodziły do pruskich szkół, pracowały w pruskich urzędach, służyły w pruskiej armii. Kulturowo i administracyjnie – Niemcy.<br><br>
+<strong>3. Strategiczny przemysł:</strong> Śląsk to węgiel, cynk, stal. Zarówno Polska (nowe, biedne państwo), jak i Niemcy (pokonane, ale nadal silne) desperacko chciały go mieć.<br><br>
+<strong>4. Decyzja aliantów:</strong> Traktat Wersalski zdecydował o plebiscycie zamiast bezpośredniego przyznania Śląska. Dał obu stronom czas na walkę o głosy – i na zbrojne powstania.</p>
+</div>
+
+<h3>Ile było Polaków a ile Niemców na Śląsku? – dane ok. 1910</h3>
+<div class="alert ai">Dane są przybliżone i sporne – obie strony manipulowały statystykami.</div>
+<table>
+<tr><th>Grupa</th><th>Szacunek</th><th>Uwagi</th></tr>
+<tr><td>Łączna ludność Górnego Śląska</td><td>ok. <strong>2,2 mln</strong></td><td>Dane spisu pruskiego z 1910 r.</td></tr>
+<tr><td>Polsko- lub śląskojęzyczni</td><td>ok. <strong>53–60%</strong></td><td>Wg spisu pruskiego: 53% mówiło po polsku lub po śląsku w domu.</td></tr>
+<tr><td>Niemieckojęzyczni</td><td>ok. <strong>35–40%</strong></td><td>Głównie w miastach, wśród urzędników, przemysłowców, inteligencji.</td></tr>
+<tr><td>Głosujący w plebiscycie (1921)</td><td><strong>1 186 964</strong></td><td>W tym ok. 182 000 byłych mieszkańców sprowadzonych przez obie strony.</td></tr>
+<tr><td>Za Niemcami</td><td><strong>707 605 (59,6%)</strong></td><td>Niemcy sprowadzili więcej emigrantów + pracodawcy straszyli robotników</td></tr>
+<tr><td>Za Polską</td><td><strong>479 359 (40,4%)</strong></td><td>Mimo polskiej większości językowej – Polska przegrała głosowanie</td></tr>
+</table>
+
+<h3>Dlaczego Polska przegrała plebiscyt mimo większości językowej?</h3>
+<table>
+<tr><th>Powód</th><th>Wyjaśnienie</th></tr>
+<tr><td><strong>Emigranci głosowali za Niemcami</strong></td><td>Prawo do głosowania mieli wszyscy urodzeni na Śląsku. Niemcy przywieźli ok. 182 000 dawnych mieszkańców, którzy wyjechali lata wcześniej i pamiętali tylko pruskie Niemcy.</td></tr>
+<tr><td><strong>Strach przed zwolnieniem</strong></td><td>Właściciele kopalń i hut (głównie Niemcy) dawali do zrozumienia: „głosujesz za Polską = tracisz pracę". Robotnik zależny od pracodawcy głosował „właściwie".</td></tr>
+<tr><td><strong>Strach przed biedną Polską</strong></td><td>Polska była nowym, słabym państwem, właśnie po wojnie z bolszewikami. Niemcy miały szkoły, szpitale, ubezpieczenia, koleje. Wielu Ślązaków bało się, że pod Polską będzie gorzej.</td></tr>
+<tr><td><strong>Tożsamość śląska ważniejsza niż polska</strong></td><td>Wielu Ślązaków czuło się Ślązakami, nie Polakami. „Zostańmy z lepiej działającym państwem" – to nie był wybór narodowy, ale praktyczny.</td></tr>
+<tr><td><strong>Lepsza propaganda Niemiec</strong></td><td>Niemcy wydały znacznie więcej pieniędzy na plakaty, wiece, gazety i przekonywanie ludzi.</td></tr>
+</table>
+
+<h3>Trzy opcje tożsamościowe Ślązaków przed plebiscytem</h3>
+<table>
+<tr><th>Opcja</th><th>Kto popierał</th><th>Argumenty</th><th>Znani przedstawiciele</th></tr>
+<tr><td><strong>Polska</strong></td><td>Polskojęzyczni robotnicy, katolickie duchowieństwo, działacze</td><td>Język, wiara, słowiańskie korzenie, wspólnota z odbudowującą się Polską</td><td>Korfanty, ks. Kapica, Zgrzebniok</td></tr>
+<tr><td><strong>Niemcy</strong></td><td>Inteligencja, urzędnicy, przemysłowcy, ewangelicy</td><td>Pruskie szkoły, bogactwo, porządek, strach przed biedną Polską</td><td>Większość arystokracji śląskiej</td></tr>
+<tr><td><strong>Autonomia śląska</strong></td><td>Część działaczy regionalnych</td><td>Śląsk dla Ślązaków – ani Polska, ani Niemcy</td><td>Ewald Latacz i inni</td></tr>
+</table>
+</section>
+
+<!-- S15 AUTONOMIA -->
+<section id="s15">
+<h2 class="sec-title">Autonomia Górnego Śląska (1922–1939)</h2>
+
+<h3>Czym była autonomia śląska?</h3>
+<div class="ev aut">
+<p>Autonomia śląska była jedyną taką rzeczą w całej Polsce – żadne inne województwo nie miało własnego parlamentu ani własnego budżetu. Śląsk był jak małe państwo w państwie: formalnie część Polski, ale z dużą samodzielnością.<br><br>
+Powstała z konieczności: alianci przyznali Polsce uprzemysłowaną część Śląska w 1922 r. częściowo dlatego, że Polska obiecała Ślązakom specjalny status. Ślązacy, którzy w większości głosowali za Niemcami w plebiscycie, mieli być przekonani, że pod Polską zachowają swoją odrębność.</p>
+</div>
+
+<h3>Co dawała autonomia – konkretnie?</h3>
+<table>
+<tr><th>Co</th><th>Szczegóły</th></tr>
+<tr><td><strong>Sejm Śląski</strong></td><td>Prawdziwy parlament regionalny, 48 posłów, siedziba w Katowicach. Uchwalał lokalne prawa. Jedyny taki parlament w całej II RP. Działał 1922–1939.</td></tr>
+<tr><td><strong>Skarb Śląski</strong></td><td>Własny budżet – podatki z kopalń i hut zostawały na Śląsku, nie szły do Warszawy. Śląsk był przez to najbogatszym województwem II RP.</td></tr>
+<tr><td><strong>Własne prawo lokalne</strong></td><td>Sejm Śląski mógł stanowić prawo m.in. w sprawach szkolnictwa, pomocy społecznej i policji.</td></tr>
+<tr><td><strong>Pruskie prawa nadal działały</strong></td><td>Na Śląsku zostało pruskie prawo cywilne i górnicze. Ważne: górnicy śląscy nadal mieli emerytury i kasy chorych (Knappschaft) – czego nie mieli górnicy z innych części Polski.</td></tr>
+</table>
+
+<h3>Kto rządził Śląskiem w tym czasie?</h3>
+<table>
+<tr><th>Lata</th><th>Kto rządził</th><th>Co się działo</th></tr>
+<tr><td>1922–1926</td><td>Korfanty i Chrześcijańska Demokracja</td><td>Złoty okres autonomii. Śląsk naprawdę rządził się sam. Napięcia z Warszawą narastają.</td></tr>
+<tr><td>1926–1930</td><td>Konflikt: sanacja vs Korfanty</td><td>Po zamachu Piłsudskiego (1926) sanacja chce ograniczyć autonomię. Korfanty broni się przez Sejm Śląski.</td></tr>
+<tr><td>1930</td><td>Sanacja przejmuje władzę</td><td>Korfanty aresztowany w „nocy brzeskiej". Autonomia staje się coraz bardziej tylko na papierze.</td></tr>
+<tr><td>1930–1939</td><td>Michał Grażyński (sanacja)</td><td>Człowiek Piłsudskiego rządzi Śląskiem twardą ręką. Ogranicza Kościół i opozycję.</td></tr>
+</table>
+
+<h3>Dlaczego komuniści zabrali autonomię w 1945 roku?</h3>
+<table>
+<tr><th>Powód</th><th>Wyjaśnienie</th></tr>
+<tr><td><strong>Ideologia komunistyczna</strong></td><td>Komuniści chcieli centralnie zarządzać wszystkim z Warszawy. Autonomia = zagrożenie dla władzy partii.</td></tr>
+<tr><td><strong>Pieniądze z kopalni</strong></td><td>Skarb Śląski oznaczał, że bogactwa ze Śląska zostają na Śląsku. Komuniści potrzebowali tych pieniędzy dla całego kraju – i wzięli je.</td></tr>
+<tr><td><strong>Strach przed separatyzmem</strong></td><td>W chaosie 1945 r. bali się, że autonomia stanie się podstawą do oderwania Śląska od Polski.</td></tr>
+<tr><td><strong>Nowi mieszkańcy</strong></td><td>Niemców wysiedlono, przyszli Polacy z Kresów. Nowi mieszkańcy nie czuli się Ślązakami – autonomia nie miała dla nich sensu.</td></tr>
+<tr><td><strong>Zniszczenie opozycji</strong></td><td>Autonomia była związana z Korfantym i Kościołem – wrogami komunistów. Likwidując autonomię, niszczyli ich bazę.</td></tr>
+</table>
+
+<h3>Co Śląsk stracił przez likwidację autonomii?</h3>
+<div class="ev ind">
+<p>– <strong>Skarb Śląski zniknął</strong> – pieniądze z kopalń i hut szły teraz do Warszawy, nie na Śląsk<br>
+– <strong>Sejm Śląski rozwiązany</strong> – Ślązacy stracili wpływ na lokalne prawo i politykę<br>
+– <strong>Pruskie ubezpieczenia zlikwidowane</strong> – górnicy stracili kasy chorych i system Knappschaft<br>
+– <strong>Tożsamość śląska tłumiona</strong> – godka to „gwara", nie język. Ślązacy mają być „po prostu Polakami"<br>
+– <strong>Po 1989 r.</strong> – Ruch Autonomii Śląska (RAŚ) domaga się powrotu autonomii. Temat żywy do dziś.</p>
+</div>
+</section>
+
+<!-- S16 HERB I FLAGA -->
+<section id="s16">
+<h2 class="sec-title">Herb i flaga Górnego Śląska</h2>
+
+<div style="display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:1.5rem;align-items:start;">
+<div style="text-align:center;">
+  <img src="data:image/png;base64,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" alt="Herb Górnego Śląska" style="max-width:200px;width:100%;border-radius:8px;"/>
+  <p style="font-size:12px;color:#666;font-family:Arial,sans-serif;margin-top:6px;">Herb Górnego Śląska – złoty orzeł na niebieskim tle</p>
+</div>
+<div style="text-align:center;">
+  <img src="data:image/png;base64,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" alt="Flaga Górnego Śląska" style="max-width:280px;width:100%;border:1px solid #ddd;border-radius:8px;"/>
+  <p style="font-size:12px;color:#666;font-family:Arial,sans-serif;margin-top:6px;">Flaga Górnego Śląska – żółty (górny) i niebieski (dolny)</p>
+</div>
+</div>
+
+<h3>Co oznaczają herb i flaga?</h3>
+<table>
+<tr><th>Element</th><th>Opis</th><th>Co symbolizuje</th></tr>
+<tr><td><strong>Złoty orzeł</strong></td><td>Orzeł zwrócony w prawo, z rozpostartymi skrzydłami, w koronie, na niebieskim tle</td><td>Nawiązanie do orła śląskich Piastów. Złoty kolor = bogactwo i dostojeństwo. Orzeł śląski jest ZŁOTY na niebieskim – odwrotnie niż orzeł polski (biały na czerwonym).</td></tr>
+<tr><td><strong>Niebieskie tło tarczy</strong></td><td>Niebieska tarcza herbowa</td><td>Niebieski = niebo, woda (rzeki śląskie), tradycja regionalna.</td></tr>
+<tr><td><strong>Żółty pas flagi</strong></td><td>Górna połowa flagi</td><td>Kolor złoty z herbu – nawiązanie do złotego orła.</td></tr>
+<tr><td><strong>Niebieski pas flagi</strong></td><td>Dolna połowa flagi</td><td>Kolor niebieski z herbu. Razem: żółto-niebieski = barwy Górnego Śląska.</td></tr>
+</table>
+
+<h3>Historia orła śląskiego</h3>
+<div class="ev ind">
+<p><strong>XIII wiek:</strong> Orzeł pojawia się na pieczęciach śląskich Piastów (Henryk Brodaty, Henryk Pobożny).<br><br>
+<strong>XIV–XVI wiek:</strong> Pod rządami Korony Czeskiej orzeł śląski utrwala złoty kolor na niebieskim tle. Staje się symbolem rozpoznawalnym w całej Europie.<br><br>
+<strong>XVII–XIX wiek:</strong> Pod Habsburgami i Prusami herb zachowywany w różnych wersjach.<br><br>
+<strong>XX wiek:</strong> I Polska, i Niemcy używały orła śląskiego jako symbolu Śląska podczas plebiscytu i powstań.<br><br>
+<strong>Dziś:</strong> Historyczny herb Górnego Śląska (złoty orzeł na niebieskim) jest symbolem tożsamości śląskiej, używanym przez organizacje regionalne.</p>
+</div>
+</section>
+
+
+<!-- S17 EUROPOSŁOWIE -->
+<section id="s17">
+<h2 class="sec-title">Europosłowie ze Śląska – ważne osoby w konkursie</h2>
+<div class="alert aw">Łukasz Kohut jest patronem honorowym Silesia Incognita 2026 – koniecznie go zapamiętaj!</div>
+
+<div class="cards">
+
+<div class="card">
+<span class="badge bp">europoseł / patron konkursu</span>
+<h4>Łukasz Kohut</h4>
+<div class="dt">ur. 1982 | Rybnik | europoseł X kadencji (2024–)</div>
+<p>Europoseł ze Śląska i <strong>patron honorowy konkursu Silesia Incognita 2026</strong>. Zwycięzcy finałów wyjeżdżają do Parlamentu Europejskiego właśnie z nim.<br><br>
+<strong>Kim jest:</strong> Polityk i działacz śląski z Rybnika. Studiował politologię na Uniwersytecie Śląskim w Katowicach. Pracował m.in. w Norwegii i Czechach.<br><br>
+<strong>Co robi dla Śląska:</strong> Zaangażowany w walkę o uznanie języka śląskiego za język regionalny. Zbiera relacje świadków Tragedii Górnośląskiej 1945. Broni praw mniejszości regionalnych w UE.<br><br>
+<strong>Słynny moment:</strong> W 2020 r. podczas przemówienia w Parlamencie Europejskim nagle przeszedł na godkę śląską – tłumacze w słuchawkach zamilkli, bo nie wiedzieli, co robić! Powiedział m.in.: <em>„I stoja tukej, chocioż we Warszawie godajom, że Ślonzoków i Ślonzoczek niy ma…"</em><br><br>
+<strong>Kadencje:</strong> IX kadencja (2019–2024, lista Wiosny), X kadencja (2024–, lista KO).</p>
+</div>
+
+<div class="card">
+<span class="badge bn">europoseł / premier / naukowiec</span>
+<h4>Jerzy Buzek</h4>
+<div class="dt">ur. 1940 | Śmiłowice (Śląsk Cieszyński) | europoseł 2004–2024</div>
+<p>Najważniejszy śląski polityk w historii Unii Europejskiej. Profesor Politechniki Śląskiej w Gliwicach.<br><br>
+<strong>Rekordy:</strong><br>
+– Przez 20 lat (2004–2024) był europosłem – rekord wśród Polaków<br>
+– Wielokrotnie zdobywał <strong>najlepszy wynik wyborczy w całej Polsce</strong><br>
+– <strong>Przewodniczący Parlamentu Europejskiego (2009–2012)</strong> – pierwszy i jedyny Polak i jedyna osoba z Europy Środkowo-Wschodniej na tym stanowisku<br>
+– Wcześniej <strong>Premier RP (1997–2001)</strong> – przeprowadził 4 wielkie reformy: administracyjną, oświatową, emerytalną, zdrowotną<br><br>
+<strong>Ze Śląskiem:</strong> Urodzony w Śmiłowicach na Śląsku Cieszyńskim. Maturę zdał w Chorzowie. Profesor Politechniki Śląskiej w Gliwicach. Działacz Solidarności na Śląsku od 1980 r.<br><br>
+<strong>W PE:</strong> Specjalizował się w energetyce i polityce klimatycznej. Przewodniczył Komisji Przemysłu, Badań Naukowych i Energii. Promował ideę Europejskiej Wspólnoty Energetycznej.</p>
+</div>
+
+</div>
+
+<h3>Inni europosłowie z okręgu śląskiego (kadencja 2019)</h3>
+<table>
+<tr><th>Europoseł</th><th>Partia</th><th>Czym znany</th></tr>
+<tr><td><strong>Jerzy Buzek</strong></td><td>PO / EPL</td><td>Przewodniczący PE 2009–2012, Premier RP 1997–2001. 20 lat jako europoseł.</td></tr>
+<tr><td><strong>Jadwiga Wiśniewska</strong></td><td>PiS / EKR</td><td>Eurodeputowana z okręgu śląskiego. Wieloletni europoseł.</td></tr>
+<tr><td><strong>Jan Olbrycht</strong></td><td>PO / EPL</td><td>Eurodeputowany, specjalista od funduszy europejskich i polityki regionalnej. Był prezydentem Cieszyna.</td></tr>
+<tr><td><strong>Łukasz Kohut</strong></td><td>Wiosna → KO</td><td>Patron Silesia Incognita. Działacz śląski, walczy o język śląski w UE.</td></tr>
+<tr><td><strong>Grzegorz Tobiszowski</strong></td><td>PiS / EKR</td><td>Eurodeputowany ze Śląska, wcześniej wiceminister energii. Blisko związany z górnictwem.</td></tr>
+<tr><td><strong>Marek Balt</strong></td><td>KO / S&D</td><td>Eurodeputowany z okręgu śląskiego, działacz ekologiczny.</td></tr>
+</table>
+
+<h3>Czym jest Parlament Europejski?</h3>
+<div class="ev ind">
+<h4>Kilka faktów – bo zwycięzcy finałów tam jadą!</h4>
+<p>
+– Parlament Europejski (PE) to jedyna bezpośrednio wybierana instytucja Unii Europejskiej<br>
+– Siedziba: <strong>Strasbourg</strong> (Francja) – główna, i <strong>Bruksela</strong> (Belgia) – gdzie odbywa się większość pracy<br>
+– Polska ma <strong>53 europosłów</strong> (po wyborach 2024), wybieranych co 5 lat<br>
+– Okręg nr 11 = województwo śląskie i opolskie – jeden z największych w Polsce<br>
+– Jerzy Buzek był <strong>Przewodniczącym PE</strong> (2009–2012) – to jak bycie „marszałkiem Sejmu" całej Europy<br>
+– Zwycięzcy Silesia Incognita odwiedzają PE w Brukseli jako nagroda za wygranie konkursu
+</p>
+</div>
+</section>
+
+
+<!-- S18 TRADYCJE -->
+<section id="s18">
+<h2 class="sec-title">Śląskie tradycje i zwyczaje</h2>
+
+<h3>Barbórka – Dzień Górnika (4 grudnia)</h3>
+<div class="ev ind">
+<div class="yr">4 grudnia – każdego roku</div>
+<h4>Najważniejsze święto śląskie</h4>
+<p>Barbórka to święto górników obchodzone 4 grudnia – w dniu <strong>św. Barbary z Nikomedii</strong>, patronki górników. To jedno z najważniejszych i najbardziej rozpoznawalnych świąt na Śląsku.<br><br>
+<strong>Skąd się wzięła?</strong> Legenda głosi, że Barbara – piękna córka pogańskiego bogatacza – przyjęła chrześcijaństwo i uciekając przed ojcem schroniła się w podziemnej grocie. Dlatego opiekuje się tymi, którzy pracują pod ziemią. Jej ojciec, który ją skazał na śmierć, zginął rażony piorunem. Kult Barbary jako patronki górników sięga średniowiecza.<br><br>
+<strong>Jak wygląda Barbórka?</strong><br>
+– Rano: uroczysta msza święta w kościele lub kopalnianej <em>cechowni</em> (sala zbiórki górników przed zjazdem)<br>
+– Orkiestry górnicze maszerują przez górnicze osiedla, grając hymny i marsze – słynna parada przechodzi przez Nikiszowiec<br>
+– Górnicy w galowych mundurach z charakterystycznym <em>czako</em> (nakrycie głowy z pióropuszem) i odznaczeniami<br>
+– Uroczyste akademie: wręczanie medali, szpad i odznaczeń zasłużonym górnikom<br>
+– <em>Pasowanie na górnika</em>: nowi górnicy składają ślubowanie i symbolicznie „skaczą przez skórę" – ceremonia przyjęcia do górniczego stanu<br>
+– Wieczorami: <em>karczmy piwne</em> – biesiadne spotkania w tradycyjnym rytuале (stare strzechy vs młode strzechy, rywalizacja przy piwie)<br><br>
+<strong>Narzędzia górnicze jako symbol:</strong> <em>Pyrlik i żelaźniak</em> (młotek i kilof) – herb górniczy, symbol Barbórki i całego górnictwa śląskiego.<br><br>
+<strong>Ciekawostka:</strong> Tradycje Barbórkowe wpisane są na Krajową Listę Niematerialnego Dziedzictwa Kulturowego (od 2018 r.).</p>
+</div>
+
+<h3>Wigilia na Śląsku – Wilijo</h3>
+<div class="ev aut">
+<h4>Śląska Wigilia ma swoje unikalne zwyczaje</h4>
+<p><strong>Nazwa:</strong> Po śląsku Wigilia to <em>Wilijo</em>. Powiedzenie: <em>„Jako je Wilijo, taki bydzie cołki rok"</em> – jak Wigilia, taki będzie cały rok.<br><br>
+<strong>Dzieciontko zamiast Mikołaja:</strong> Na Śląsku prezenty pod choinkę przynosi <strong>Dzieciontko</strong> (Dzieciątko Jezus), nie Mikołaj ani Gwiazdor. Po kolacji otwiera się okno, żeby Dzieciontko mogło wejść. Pod choinką stawia się <em>betlyjkę</em> (szopkę bożonarodzeniową).<br><br>
+<strong>Tradycje przy stole:</strong><br>
+– Pod talerze wkładane są <strong>pieniądze</strong> (monety lub banknoty) – na dobrobyt w nowym roku<br>
+– Pod obrus wkłada się <strong>siano lub słomę</strong><br>
+– Pod stołem stawia się metalowy przedmiot (siekiera) – metal ma chronić domowników<br>
+– Wolne nakrycie dla niespodziewanego gościa (wędrowca)<br>
+– Głowa rodziny czyta fragmenty Ewangelii po śląsku<br><br>
+<strong>Tradycyjne potrawy wigilijne:</strong> moczka (deser z piernika, bakalii i soku z śliwek), makówki (mak z mlekiem i bakaliami), siemieniota/siemionka (zupa z nasion konopi – bardzo stara tradycja), brzadowy żur (zupa z suszonymi owocami), karp, kapusta z grzybami, kompot z suszonych owoców.</p>
+</div>
+
+<h3>Tyta – prezent dla pierwszoklasisty</h3>
+<div class="ev ind">
+<h4>Śląski zwyczaj pierwszego dnia szkoły</h4>
+<p><strong>Tyta</strong> to charakterystyczny śląski zwyczaj: dziecko idące po raz pierwszy do szkoły dostaje od rodziny duży rożek z kolorowego papieru wypełniony słodyczami i drobnymi prezentami. To pocieszenie i nagroda za wkroczenie w „dorosłe", szkolne życie. Zwyczaj znany też w Niemczech jako <em>Schultüte</em>. Na Śląsku jest wyjątkowo silnie zakorzeniony.</p>
+</div>
+
+<h3>Polterabend – wieczór przed ślubem</h3>
+<div class="ev aut">
+<h4>Śląski zwyczaj weselny</h4>
+<p>Wieczór przed ślubem sąsiedzi, znajomi i rodzina zbierają się przed domem przyszłej pary i <strong>tłuką porcelanę</strong> (nie szkło!) przed drzwiami. Hałas i skorupy mają przynieść szczęście i pomyślność małżonkom. Zbieranie skorup przez parę to symbol wspólnej pracy w małżeństwie. Do późna trwa zabawa, taniec i życzenia. Z niem. <em>Polterabend</em> (wieczór łomotu).</p>
+</div>
+
+<h3>Inne śląskie tradycje i zwyczaje</h3>
+<table>
+<tr><th>Tradycja</th><th>Kiedy</th><th>Na czym polega</th></tr>
+<tr><td><strong>Kołocz śląski</strong></td><td>Wesela, chrzciny, święta</td><td>Drożdżowe ciasto z nadzieniem z maku, sera lub jabłek. Symbol śląskiej gościnności. Przepis przekazywany z pokolenia na pokolenie.</td></tr>
+<tr><td><strong>Rolada śląska z kluskami i modrą kapustą</strong></td><td>Niedziela, uroczystości</td><td>Najsłynniejsze danie śląskie. Wołowina zwijana z ogórkiem, słoniną i musztardą. Podawana z kluskami śląskimi (kopytkami z dziurką) i modrą kapustą (czerwoną kapustą). Symbol śląskiej kuchni.</td></tr>
+<tr><td><strong>Topienie Marzanny</strong></td><td>Wiosna (21 marca)</td><td>Śląski zwyczaj pożegnania zimy – słomiana kukła Marzanny jest topiona w rzece lub palona. Wspólna zabawa rodzin i dzieci.</td></tr>
+
+
+<tr><td><strong>Orkiestry górnicze dęte</strong></td><td>Barbórka i inne uroczystości</td><td>Tradycja górniczych orkiestr dętych wpisana na Krajową Listę Niematerialnego Dziedzictwa Kulturowego. Marsze przez familoki i osiedla górnicze.</td></tr>
+
+<tr><td><strong>Noc świętojańska</strong></td><td>23/24 czerwca</td><td>Śląska wersja sobótki. Palenie ognisk, wróżby, puszczanie wianków na wodę. Tradycja związana z letnim przesileniem słońca.</td></tr>
+
+
+</table>
+
+<h3>Śląska kuchnia – co koniecznie znać</h3>
+<table>
+<tr><th>Danie / produkt</th><th>Co to jest</th></tr>
+<tr><td><strong>Rolada śląska</strong></td><td>Wołowina zwijana z ogórkiem, słoniną, musztardą. Podawana z kluskami i modrą kapustą. Sztandarowe danie śląskie.</td></tr>
+<tr><td><strong>Kluski śląskie</strong></td><td>Kopytka z charakterystyczną dziurką pośrodku. Symbol śląskiej kuchni.</td></tr>
+<tr><td><strong>Modro kapusta</strong></td><td>Czerwona kapusta duszona z jabłkiem i przyprawami. Nieodłączny dodatek do rolady.</td></tr>
+<tr><td><strong>Krupniok</strong></td><td>Śląska kaszanka z krupami (kaszą) i krwią. Grubsza i bardziej kaszyta niż zwykła kaszanka.</td></tr>
+<tr><td><strong>Żymła</strong></td><td>Bułka pszenna (z niem. Semmel). „Iść po żymły" = iść po bułki.</td></tr>
+<tr><td><strong>Kołocz śląski</strong></td><td>Drożdżowe ciasto z nadzieniem (mak, ser, jabłka). Na wesela i chrzciny.</td></tr>
+<tr><td><strong>Moczka</strong></td><td>Wigilijna potrawa z piernika, bakalii i soku śliwkowego. „Ile śląskich domów, tyle przepisów na moczkę".</td></tr>
+<tr><td><strong>Makówki</strong></td><td>Deser wigilijny – mak z mlekiem, cukrem i bakaliami.</td></tr>
+<tr><td><strong>Szneka z glancem</strong></td><td>Drożdżówka z lukrem (glanc = z niem. Glanz = połysk). Śląski przysmak.</td></tr>
+</table>
+
+</section>
+
+</main>
+<footer>Materiały przygotowane na konkurs Silesia Incognita 2026 | Finał: 16 maja 2026, Tychy | Powodzenia!</footer>
+<script>
+function show(id){
+  document.querySelectorAll('section').forEach(s=>s.classList.remove('on'));
+  document.querySelectorAll('nav a').forEach(a=>a.classList.remove('on'));
+  document.getElementById(id).classList.add('on');
+  event.target.classList.add('on');
+  window.scrollTo(0,0);
+  return false;
+}
+</script>
+</body>
+</html>
